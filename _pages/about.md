@@ -6,6 +6,7 @@ redirect_from:
   - /about/
   - /about.html
 ---
+<div style="border-bottom: 1px dotted #ccc; margin-bottom: 30px;"></div>
 
 Recent News
 ======
@@ -15,18 +16,14 @@ Recent News
   <div><strong> 🎉 New Paper Acceptance! 🎉</strong></div>
   <div><strong>9/18/2024</strong></div>
 </div>
-<div style="margin-bottom: 10px;">Our paper titled “Towards a Cognitive Model of Dynamic Debugging: Does Identifier Construction Matter?” was accepted to IEEE TSE (Transactions in Software Engineering)</div>
+<div style="margin-bottom: 10px;">Our paper titled “Towards a Cognitive Model of Dynamic Debugging: Does Identifier Construction Matter?” was accepted to IEEE Transactions in Software Engineering (TSE)</div>
 
 <div style="margin-bottom: 30px;"></div>
-<!-- <div style="display: flex; justify-content: space-between;">
-  <div><strong>9/18/2024</strong></div>
-<div> Our paper titled “Towards a Cognitive Model of Dynamic Debugging: Does Identifier Construction Matter?” has been accepted to IEEE TSE (Transactions in Software Engineering)</div>
-<div style="margin-bottom: 10px;">University of Michigan</div>
 
- -->
+<div style="border-bottom: 1px dotted #ccc; margin-bottom: 30px;"></div>
 
 
-Selected Publications
+Peer Reviewed Publications
 ======
 
 {% if site.publication_category %}

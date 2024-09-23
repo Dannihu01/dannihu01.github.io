@@ -7,6 +7,7 @@
    ========================================================================== */
 
 .sidebar {
+  margin-right: 20px;
   -webkit-transform: translate3d(0, 0 , 0);
           transform: translate3d(0, 0 , 0);
 
@@ -58,6 +59,7 @@
 
 .sidebar__right {
   margin-bottom: 1em;
+  margin-left:40px;
 
   @include breakpoint($large) {
     position: relative;
@@ -101,10 +103,11 @@
 }
 
 .author__content {
+  margin-right: 40px;
   display: table-cell;
   vertical-align: top;
   padding-left: 15px;
-  padding-right: 25px;
+  padding-right: 50px;
   line-height: 1;
 
   @include breakpoint($large) {
