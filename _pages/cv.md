@@ -110,6 +110,58 @@ Work and Relevant Experience
   <li>Maintained ticket queue and escalated tickets to appropriate services and teams to regulate workflow</li>
 </ul>
 
+<div style="display: flex; justify-content: space-between; color: Darkblue;">
+  <div><strong>Lecture Video Captioner</strong></div>
+  <div><strong>Mar 2020 - Jan 2021</strong></div>
+</div>
+<div>Michigan State University Services Teaching and Learning Technology</div>
+<ul>
+  <li>Developed detail oriented and ADA compliant, accurate closed captions on lecture and media content</li>
+  <li>Dramatically increased equitable access to lecture materials to students needing accomodations for lecture materials</li>
+</ul>
+
+<div style="display: flex; justify-content: space-between; color: Darkblue;">
+  <div><strong>Information Technology Intern</strong></div>
+  <div><strong>Sep 2019 - Jan 2021</strong></div>
+</div>
+<div>Michigan State University Residential and Hospitality Services</div>
+<ul>
+  <li>Oversaw daily operations at the R&HS IT desk, addressing customers frequently through phone calls, live chat support, and providing tier one technical assistance</li>
+  <li>Compiled campus wide data metrics weekly into visual, easily understood graphics to present to upper management</li>
+</ul>
+
+<div style="display: flex; justify-content: space-between; color: Darkblue;">
+  <div><strong>Editor in Chief, Co-Founder</strong></div>
+  <div><strong>June 2018 - Jul 2019</strong></div>
+</div>
+<div>Reinvented Magazine 501(c)(3)</div>
+<ul>
+  <li>Developed the first magazine by girls in STEM for girls in STEM</li>
+  <li>Founded a successful 501(c)(3) Nonprofit magazine program that increased access of STEM reading materials to those with less resources</li>
+  <li>Successfully produced a one-for-one program -- for every magazine bought, another was donated to local libaries, girls' programs, and schools</li>
+</ul>
+
+<div style="display: flex; justify-content: space-between; color: Darkblue;">
+  <div><strong>Lead Software Engineer, Team Captain</strong></div>
+  <div><strong>Dec 2017 - Jun 2019</strong></div>
+</div>
+<div>FIRST Robotics Team FRC 1076</div>
+<ul>
+  <li>Created an in-depth training program for new software team members that taught the basics of python and c++</li>
+  <li>Meticulously documented workflow and created a program management system for the team as a whole, facilitated cross-team communication</li>
+  <li>Under my leadership, took the team to the robotics world championships for the first times in team history, two years in a row (2018, 2019)</li>
+</ul>
+
+<div style="display: flex; justify-content: space-between; color: Darkblue;">
+  <div><strong>Research Assistant Intern, Internal Medicine Dept</strong></div>
+  <div><strong>May 2018 - Aug 2018</strong></div>
+</div>
+<div>University of Michigan Internal Medicine</div>
+<ul>
+  <li>Under the guidance of Dr. Wiley, studied the mechanisms of bowel cancer</li>
+  <li>Gained multiple skills in wet lab ranging from basic lab training, western blot, confocal microscope usage, to cell growth and management</li>
+</ul>
+
 <div style="margin-bottom: 30px;"></div>
 <div style="border-bottom: 1px dotted #ccc; margin-bottom: 30px;"></div>
 
