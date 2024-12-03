@@ -3,8 +3,9 @@
 title: Danniell Hu
 description: Computer Science PhD Student @ UMich
 
-baseurl: /Dannihu01.github.io #name of GitHub repository
-url: "" #custom url to be used instead of GitHub repository
+baseurl: ""
+# url: /dannihu01.github.io #name of GitHub repository
+# url: "" #custom url to be used instead of GitHub repository
 email: #
 
 # Pagination
