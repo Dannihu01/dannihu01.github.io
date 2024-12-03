@@ -7,11 +7,11 @@ profile:
 published: true
 ---
 
-I am a first year PhD student in Computer Science at the University of Michigan, where I have the pleasure of working with [Dr. Elizabeth Bondi-Kelly](https://sites.google.com/view/elizabethbondi) in the [RealAIze Lab](https://sites.google.com/view/realize-lab). My research focuses on advancing artificial intelligence in healthcare through participatory AI frameworks, with an emphasis on applications in women’s health. I am passionate about developing ethical, trustworthy AI systems and exploring how inclusive, human-centered approaches can shape more adaptive and responsible AI.
+I am a first year PhD student in Computer Science at the University of Michigan, where I have the pleasure of working with [Dr. Elizabeth Bondi-Kelly](https://sites.google.com/view/elizabethbondi) in the [Realize Lab](https://sites.google.com/view/realize-lab). My research focuses on advancing artificial intelligence in healthcare through participatory AI frameworks, with an emphasis on applications in women’s health. I am passionate about developing ethical, trustworthy AI systems and exploring how inclusive, human-centered approaches can shape more adaptive and responsible AI.
 
-Prior to my PhD, I worked as an R&D embedded software engineer at [Stryker](https://www.stryker.com/us/en/index.html). There, I gained hands-on experience by developing PCBs for hospital bed ecosystems, innovating in medical monitoring technologies, and debugging in the field, all while staying grounded to real-world needs through voice-of-customer visits.
+Prior to my PhD, I worked as an R&D embedded software engineer at [Stryker](https://www.stryker.com/us/en/index.html). There, I gained hands-on experience by developing PCBs for hospital bed ecosystems and innovating in medical monitoring technologies while staying grounded to real-world needs through voice-of-customer visits.
 
-Outside of research, I play violin with the university [Campus Symphony Orchestra](https://sites.google.com/a/umich.edu/campus-orchestras/) and enjoy creating music in FL Studio. I also love crocheting, cooking, and unwinding with PC video games.
+Outside of research, I play violin with the university [Campus Symphony Orchestra](https://sites.google.com/a/umich.edu/campus-orchestras/) and enjoy creating music in FL Studio. I also love crocheting, cooking, playing video games, and building computers.
 
 ## News
 

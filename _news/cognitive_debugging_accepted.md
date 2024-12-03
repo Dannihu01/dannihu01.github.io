@@ -4,4 +4,4 @@ date: 2024-09-18
 publication_url: "/publications/#towards-a-cognitive-model-of-dynamic-debugging-does-identifier-construction-matter"
 ---
 
-Our publication exploring what happens in your brain while debugging software was accepted to Transactions on Software Engineering.
+What happens inside your brain when you are debugging software? How does your brain activity change based on your level of programming experience, your native language, or your reading ability? We found out! Our publication using medical imaging (fNIRS) exploring the behavioral and neural distinctions of software debugging was accepted to Transactions on Software Engineering.
