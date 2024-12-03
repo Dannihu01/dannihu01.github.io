@@ -21,7 +21,7 @@ Outside of research, I play violin with the university [Campus Symphony Orchestr
     <li>
       <strong>{{ news.date | date: "%B %d, %Y" }}:</strong>
       <a href="{{ site.baseurl }}{{ news.publication_url }}">{{ news.title }}</a>
-      <p>{{ news.content | strip_html | truncatewords: 20 }}</p>
+      <p>{{ news.content | strip_html | truncatewords: 150 }}</p>
     </li>
   {% endfor %}
 </ul>
