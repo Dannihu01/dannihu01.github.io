@@ -7,13 +7,13 @@ profile:
 published: true
 ---
 
-I am a first year PhD student in Computer Science at the University of Michigan, where I have the pleasure of working with [Dr. Elizabeth Bondi-Kelly](https://sites.google.com/view/elizabethbondi) in the [Realize Lab](https://sites.google.com/view/realize-lab). My current research focuses on advancing artificial intelligence in healthcare through participatory AI frameworks, multi-agent systems, and exploring how we can apply requirements engineering techniques to the development of AI systems. I am especially interested in applications in women’s health and am driven by a passion for developing AI systems that are ethical, trustworthy, and human-centered. 
+I am a first year PhD student in Computer Science at the University of Michigan, where I have the pleasure of working with [**Dr. Elizabeth Bondi-Kelly**](https://sites.google.com/view/elizabethbondi) in the [**Realize Lab**](https://sites.google.com/view/realize-lab). 
 
-In addition to my current work, I’ve explored research in software engineering and medical imaging, studying how programmer brains work at a foundational, cognitive level.
+I’m currently researching how to design and develop AI systems that benefit humans while preserving the human element at every stage. I explore participatory frameworks, design effective multi-agent systems, and draw on interdisciplinary methods to guide responsible AI development. My ultimate goal is to ensure that AI innovations remain **ethical, effective, trustworthy, and human-centered.** I’ve also investigated research in software engineering and medical imaging, including how programmers’ brains function at a cognitive level.
 
-Prior to my PhD, I worked as an R&D embedded software engineer at [Stryker](https://www.stryker.com/us/en/index.html). There, I gained hands-on experience by developing PCBs for hospital bed ecosystems and innovating in medical monitoring technologies while staying grounded to real-world needs through voice-of-customer visits.
+Before my PhD, I worked as an R&D embedded software engineer at [**Stryker**](https://www.stryker.com/us/en/index.html) where I developed PCBs for hospital bed ecosystems and medical monitoring technologies. 
 
-Outside of research, I play violin with the university [Campus Symphony Orchestra](https://sites.google.com/a/umich.edu/campus-orchestras/) and enjoy creating music in FL Studio. I also love crocheting, cooking, playing video games, and building computers.
+Outside of research, I enjoy making music—both by playing violin in the University of Michigan’s [**Campus Symphony Orchestra**](https://sites.google.com/a/umich.edu/campus-orchestras/) and composing in FL Studio. I also love crocheting, cooking, playing video games, and building computers.
 
 ## News
 
