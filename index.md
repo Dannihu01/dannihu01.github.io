@@ -9,11 +9,11 @@ published: true
 
 I am a first year PhD student in Computer Science at the University of Michigan, where I have the pleasure of working with [**Dr. Elizabeth Bondi-Kelly**](https://sites.google.com/view/elizabethbondi) in the [**Realize Lab**](https://sites.google.com/view/realize-lab). 
 
-I’m currently researching how to design and develop AI systems that benefit humans while preserving the human element at every stage. I explore participatory frameworks, design effective multi-agent systems, and draw on interdisciplinary methods to guide responsible AI development. My ultimate goal is to ensure that AI innovations remain **ethical, effective, trustworthy, and human-centered.** I’ve also investigated research in software engineering and medical imaging, including how programmers’ brains function at a cognitive level.
+I am currently researching the design and development of human-AI systems that enhance human abilities while maintaining the essential human element. My work focuses on integrating interdisciplinary techniques to advance participatory AI frameworks and designing more effective multi-agent systems. Much of my research is applied to women's reproductive health and other medical contexts, with the ultimate goal of developing AI systems that are **ethical, effective, human-centered, and for social good**.
 
-Before my PhD, I worked as an R&D embedded software engineer at [**Stryker**](https://www.stryker.com/us/en/index.html) where I developed PCBs for hospital bed ecosystems and medical monitoring technologies. 
+Before my PhD, I worked as an R&D Embedded Software Engineer at [**Stryker**](https://www.stryker.com/us/en/index.html) in the medical division where I developed PCBs for hospital bed ecosystems and medical monitoring technologies. 
 
-Outside of research, I enjoy making music—both by playing violin in the University of Michigan’s [**Campus Symphony Orchestra**](https://sites.google.com/a/umich.edu/campus-orchestras/) and composing in FL Studio. I also love crocheting, cooking, playing video games, and building computers.
+Outside of research, I enjoy making music—both by playing violin in the University of Michigan’s [**Campus Symphony Orchestra**](https://sites.google.com/a/umich.edu/campus-orchestras/) and composing in FL Studio. I also love crocheting, cooking (eating), and playing video games.
 
 ## News
 
