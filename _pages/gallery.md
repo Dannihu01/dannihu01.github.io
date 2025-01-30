@@ -6,7 +6,7 @@ permalink: /gallery/
 published: true
 ---
 
-Welcome to my gallery! Click tabs to see what I've been up to. All pictures are ones I've taken :)
+Welcome to my gallery! Click tabs to see what I've been up to.
 
 <!-- Tab structure -->
 <div class="tabs">
