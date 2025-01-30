@@ -9,7 +9,7 @@ published: true
 
 I am a first year PhD student in Computer Science at the University of Michigan, where I have the pleasure of working with [**Dr. Elizabeth Bondi-Kelly**](https://sites.google.com/view/elizabethbondi) in the [**Realize Lab**](https://sites.google.com/view/realize-lab). 
 
-I am currently researching the design and development of human-AI systems that enhance human abilities while maintaining the essential human element. My work focuses on integrating interdisciplinary techniques to advance participatory AI frameworks and designing more effective multi-agent systems. Much of my research is applied to women's reproductive health and other medical contexts, with the ultimate goal of developing AI systems that are **ethical, effective, human-centered, and for social good**.
+My work focuses on integrating interdisciplinary techniques to advance participatory AI frameworks and designing more effective multi-agent systems. Much of my research is applied to women's reproductive health and other medical contexts, with the ultimate goal of developing AI systems that are **ethical, effective, human-centered, and for social good**.
 
 Before my PhD, I worked as an R&D Embedded Software Engineer at [**Stryker**](https://www.stryker.com/us/en/index.html) in the medical division where I developed PCBs for hospital bed ecosystems and medical monitoring technologies. 
 
