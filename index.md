@@ -7,9 +7,9 @@ profile:
 published: true
 ---
 
-I am a first year PhD student in Computer Science at the University of Michigan, where I have the pleasure of working with [**Dr. Elizabeth Bondi-Kelly**](https://sites.google.com/view/elizabethbondi) in the [**Realize Lab**](https://sites.google.com/view/realize-lab). 
+I am a first year PhD student in Computer Science at the University of Michigan, where I have the pleasure of working with [**Dr. Elizabeth Bondi-Kelly**](https://sites.google.com/view/elizabethbondi) in the [**Realize Lab**](https://sites.google.com/view/realize-lab) and [**Dr. Westley Weimer**](https://web.eecs.umich.edu/~weimerw/).
 
-My work focuses on integrating interdisciplinary techniques to advance participatory AI frameworks and designing more effective multi-agent systems. Much of my research is applied to women's reproductive health and other medical contexts, with the ultimate goal of developing AI systems that are **ethical, effective, human-centered, and for social good**.
+I design AI systems for Social Impact. My research focuses on building human-centered AI systems that integrate participatory design and interdisciplinary methods. I'm particularly interested in medical contexts such as women's reproductive health.
 
 Before my PhD, I worked as an R&D Embedded Software Engineer at [**Stryker**](https://www.stryker.com/us/en/index.html) in the medical division where I developed PCBs for hospital bed ecosystems and medical monitoring technologies. 
 
