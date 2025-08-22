@@ -54,6 +54,20 @@
 
 
     </script>
+
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+  const toggleButton = document.querySelector(".nav-toggle");
+  const menu = document.getElementById("primary-menu");
+
+  toggleButton.addEventListener("click", function() {
+    const expanded = this.getAttribute("aria-expanded") === "true" || false;
+    this.setAttribute("aria-expanded", !expanded);
+    menu.classList.toggle("open");
+  });
+});
+</script>
+
 {% include header.html %}
         <body>
         

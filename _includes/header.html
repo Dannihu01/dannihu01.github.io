@@ -1,14 +1,13 @@
-<!-- _includes/header.html -->
 <header class="site-header" role="banner">
-  <nav class="nav" aria-label="Primary">
-    <!-- Changed .brand to just be a menu-style link -->
-    <a class="menu-link" href="{{ site.baseurl | default: '/' }}">Danniell Hu</a>
+  <nav id="primary-nav" class="nav" aria-label="Primary">
+    <a class="brand" href="{{ site.baseurl | default: '/' }}">Danniell Hu</a>
 
     <button
       class="nav-toggle"
       aria-controls="primary-menu"
       aria-expanded="false"
       aria-label="Toggle navigation"
+      type="button"
     >
       <span class="bar" aria-hidden="true"></span>
       <span class="bar" aria-hidden="true"></span>
@@ -25,4 +24,87 @@
       -->
     </div>
   </nav>
+
+  <style>
+    /* Layout + scoping so global styles can't leak in */
+    .site-header .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* Mobile (JS controls visibility via .is-open on the nav) */
+    @media (max-width: 767.98px) {
+      #primary-nav .menu { display: none !important; }
+      #primary-nav.is-open .menu { display: block !important; }
+    }
+
+    /* Desktop (CSS owns it; always visible, hamburger hidden) */
+    @media (min-width: 768px) {
+      #primary-nav .nav-toggle { display: none !important; }
+      #primary-nav .menu { display: flex !important; gap: 1rem; }
+    }
+  </style>
+
+  <script>
+    (function () {
+      const nav  = document.getElementById('primary-nav');
+      const btn  = nav?.querySelector('.nav-toggle');
+      if (!nav || !btn) return;
+
+      const mql = window.matchMedia('(min-width: 768px)');
+
+      // Toggle only affects mobile by adding/removing a single class on <nav>
+      btn.addEventListener('click', () => {
+        if (mql.matches) return; // ignore clicks on desktop
+        const nowOpen = nav.classList.toggle('is-open');
+        btn.setAttribute('aria-expanded', nowOpen ? 'true' : 'false');
+      });
+
+      // Sync ARIA when crossing the breakpoint; do not change state arbitrarily
+      const onBPChange = (e) => {
+        if (e.matches) {
+          // Entering desktop: menu is always visible via CSS; mark expanded
+          btn.setAttribute('aria-expanded', 'true');
+          nav.classList.remove('is-open'); // prevent mobile state from leaking
+        } else {
+          // Entering mobile: start closed unless user had it open already (we cleared above)
+          const open = nav.classList.contains('is-open');
+          btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        }
+      };
+
+      // Initial sync
+      onBPChange(mql);
+
+      // Listen only for breakpoint changes (prevents flicker during drag-resize)
+      if (mql.addEventListener) mql.addEventListener('change', onBPChange);
+      else if (mql.addListener) mql.addListener(onBPChange);
+
+      // Optional: close when clicking outside on mobile
+      document.addEventListener('click', (e) => {
+        if (mql.matches) return; // desktop: ignore
+        if (!nav.contains(e.target)) {
+          nav.classList.remove('is-open');
+          btn.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      // Optional: close with Escape on mobile
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !mql.matches) {
+          nav.classList.remove('is-open');
+          btn.setAttribute('aria-expanded', 'false');
+        }
+      });
+    })();
+  </script>
+
+  <noscript>
+    <style>
+      /* If JS is off, show the menu on all sizes so users aren’t stuck */
+      #primary-nav .menu { display: block; }
+      @media (min-width: 768px) { #primary-nav .menu { display: flex; gap: 1rem; } }
+    </style>
+  </noscript>
 </header>
