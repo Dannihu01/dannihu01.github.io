@@ -2,27 +2,39 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 
-
 @charset "utf-8";
 
-// Width of the content area
+/* =========================================
+   Global layout tokens & helpers
+========================================= */
+
+/* Ideal max content width & responsive paddings */
 $content-width:    1100px;
+$content-pad-min:  16px;   /* ~1rem on small phones */
+$content-pad-max:  32px;   /* ~2rem on large screens */
+
 $on-phone:         450px;
 $on-palm:          660px;
 $on-laptop:        1000px;
 
+/* Media mixin (legacy support for your existing partials) */
 @mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
+  @media screen and (max-width: $device) {
+    @content;
+  }
 }
 
-// Import partials from `sass_dir` (defaults to `_sass`)
-// Do not make any changes to this file. Go to /_sass and find the appropriate SCSS file and make changes there.
+/* Fluid container helper (optional, use in your own layouts if you like)
+.wrapper {
+  max-width: min(#{$content-width}, 92vw);
+  margin-inline: auto;
+  padding-inline: clamp(#{$content-pad-min}, 4vw, #{$content-pad-max});
+}
+*/
 
-// JN: For now, split @import to anable conditional import of CSS. Also. @import may be deprecated soon so plan
-// for this change
-
+/* =========================================
+   Theme Imports (unchanged)
+========================================= */
 @import 'variables';
 @import 'footer-social';
 @import 'projects';
@@ -31,3 +43,248 @@ $on-laptop:        1000px;
 @import 'style';
 @import 'google-fonts';
 @import 'syntax-highlighting';
+
+/* =========================================
+   Modern Navbar (full-bleed, glassy, animated)
+   HTML expected:
+   <header class="site-header">
+     <nav class="nav">
+       <a class="brand" href="/">Danniell Hu</a>
+       <button class="nav-toggle" aria-controls="primary-menu" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+       </button>
+       <div id="primary-menu" class="menu">
+         <a href="/">Home</a> ...
+       </div>
+     </nav>
+   </header>
+========================================= */
+
+/* Theme tokens (tweak freely) */
+:root {
+  --nav-bg-start: #ffffff;   /* background stays white */
+  --nav-bg-end:   #ffffff;
+
+  --nav-fg:       #111827;   /* dark gray/near black text */
+  --nav-fg-dim:   #374151;   /* slightly lighter gray for inactive links */
+
+  --nav-hover-bg: rgba(0,0,0,0.05); /* subtle gray hover background */
+  --nav-ring:     #2563eb;   /* blue focus outline */
+  --nav-border:   rgba(0,0,0,0.1);  /* light border for mobile menu */
+  --nav-shadow:   0 8px 24px rgba(0,0,0,.08);
+}
+
+
+.site-header {
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  color: var(--nav-fg);
+  background: linear-gradient(180deg, var(--nav-bg-start), var(--nav-bg-end));
+
+  /* stronger shadow for visibility on white */
+box-shadow:
+  0 4px 6px rgba(0, 0, 0, 0.15),
+  0 8px 16px rgba(0, 0, 0, 0.12),
+  0 16px 24px rgba(0, 0, 0, 0.10);
+
+
+  background-clip: padding-box;
+  -webkit-backdrop-filter: saturate(140%) blur(8px);
+  backdrop-filter: saturate(140%) blur(8px);
+}
+
+
+/* Inner container aligns with your site width */
+.nav {
+  max-width: $content-width;       /* keep aligned with the rest of the site */
+  margin: 0 auto;
+padding-block: 0.8rem;   /* increases top & bottom space */
+  padding-inline: clamp(#{$content-pad-min}, 4vw, #{$content-pad-max});  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-inline: clamp(#{$content-pad-min}, 4vw, #{$content-pad-max});
+}
+
+/* Brand */
+.brand {
+  font-weight: 800;
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  letter-spacing: .1px;
+  text-decoration: none;
+  color: var(--nav-fg);
+  white-space: nowrap;
+  opacity: .98;
+  transition: opacity .2s ease;
+}
+.brand:hover { opacity: 1; }
+
+/* Menu row */
+.menu {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+}
+
+/* Links: pill hit-area + underline animation */
+.menu a {
+  --pad-x: .8rem;
+  --pad-y: .45rem;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  padding: var(--pad-y) var(--pad-x);
+  border-radius: 999px;
+  color: var(--nav-fg-dim);
+  text-decoration: none;
+  line-height: 1;
+  transition: color .2s ease, background-color .2s ease, transform .15s ease;
+}
+
+/* Underline from center */
+.menu a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 6px;
+  width: 0;
+  height: 2px;
+  background: currentColor;
+  border-radius: 2px;
+  transform: translateX(-50%);
+  transition: width .18s ease;
+}
+
+/* Hover/focus */
+.menu a:hover,
+.menu a:focus-visible {
+  background: var(--nav-hover-bg);
+  color: var(--nav-fg);
+}
+.menu a:hover::after,
+.menu a:focus-visible::after {
+  width: calc(100% - var(--pad-x) * 2);
+}
+
+/* Active link (supports Jekyll aria-current) */
+.menu a[aria-current="page"],
+.menu a.is-active {
+  color: var(--nav-fg);
+  background: rgba(255,255,255,.12);
+}
+
+/* Focus ring (keyboard) */
+.menu a:focus-visible,
+.nav-toggle:focus-visible {
+  outline: 2px solid var(--nav-ring);
+  outline-offset: 2px;
+}
+
+/* Hamburger (hidden on desktop) */
+.nav-toggle {
+  display: none;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  border-radius: .6rem;
+}
+
+/* Hamburger bars */
+.nav-toggle .bar {
+  position: absolute;
+  left: 50%;
+  width: 22px;
+  height: 2px;
+  background: var(--nav-fg);
+  transform: translateX(-50%);
+  transition: transform .2s ease, opacity .2s ease, top .2s ease;
+}
+.nav-toggle .bar:nth-child(1) { top: 12px; }
+.nav-toggle .bar:nth-child(2) { top: 19px; }
+.nav-toggle .bar:nth-child(3) { top: 26px; }
+
+/* Animate to "X" when expanded */
+.nav-toggle[aria-expanded="true"] .bar:nth-child(1) {
+  top: 19px; transform: translateX(-50%) rotate(45deg);
+}
+.nav-toggle[aria-expanded="true"] .bar:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle[aria-expanded="true"] .bar:nth-child(3) {
+  top: 19px; transform: translateX(-50%) rotate(-45deg);
+}
+
+/* =========================================
+   Responsive behavior
+========================================= */
+@media (max-width: 860px) {
+  .nav {
+    height: 60px;
+  }
+
+  /* Show hamburger on small screens */
+  .nav-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Collapse menu into a floating sheet */
+  .menu {
+    position: absolute;
+    right: clamp(#{$content-pad-min}, 4vw, #{$content-pad-max});
+    top: calc(100% + .5rem);
+    background: linear-gradient(180deg, var(--nav-bg-start), var(--nav-bg-end));
+    border: 1px solid var(--nav-border);
+    border-radius: 14px;
+    padding: .5rem;
+    box-shadow: var(--nav-shadow);
+    display: none;               /* hidden by default */
+    flex-direction: column;
+    min-width: 240px;
+    overflow: clip;
+  }
+
+  .menu a {
+    width: 100%;
+    justify-content: flex-start;
+    padding: .7rem .85rem;
+    border-radius: 10px;
+  }
+
+  /* Open state (toggled by your inline JS) */
+  .menu.is-open {
+    display: flex;
+    animation: menuIn .18s ease-out;
+  }
+
+  @keyframes menuIn {
+    from { opacity: 0; transform: translateY(-4px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Only brand + hamburger remain in the top row */
+  .nav { justify-content: space-between; }
+}
+
+/* Slightly tighter nav on very large screens so it doesn’t feel too airy */
+@media (min-width: 1440px) {
+  .nav { height: 68px; }
+}
+
+/* =========================================
+   Accessibility extras (reduce motion)
+========================================= */
+@media (prefers-reduced-motion: reduce) {
+  .menu.is-open,
+  .menu a::after,
+  .nav-toggle .bar {
+    transition: none !important;
+    animation: none !important;
+  }
+}

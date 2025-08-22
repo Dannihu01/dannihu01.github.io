@@ -7,21 +7,29 @@ profile:
 published: true
 ---
 
-I am a first year PhD student in Computer Science at the University of Michigan, where I have the pleasure of working with Professor [**Elizabeth Bondi-Kelly**](https://sites.google.com/view/elizabethbondi) in the [**Realize Lab**](https://sites.google.com/view/realize-lab) and Professor [**Westley Weimer**](https://web.eecs.umich.edu/~weimerw/) in the Weimer Research Group.
+Hi! My name is Danniell, but I usually go by Danni. 
+
+I'm a second year PhD student in Computer Science at the University of Michigan, where I have the pleasure of working with Professor [**Elizabeth Bondi-Kelly**](https://sites.google.com/view/elizabethbondi) in the [**Realize Lab**](https://sites.google.com/view/realize-lab) and Professor [**Westley Weimer**](https://web.eecs.umich.edu/~weimerw/) in the Weimer Research Group.
 
 <!-- <div style="background: #f0f8ff; border-left: 4px solid #007bc0; padding: 1rem; margin: 1rem 2rem 1rem 0; max-width: 600px;">
   <strong>I design AI systems for Social Impact.</strong> My research focuses on building human-centered AI systems that integrate participatory design and interdisciplinary methods. I'm particularly interested in medical contexts such as women's reproductive health.
 </div> -->
 
 <div style="background-color: #e6f0fa; border-left: 4px solid #005fa3; padding: 1rem; border-radius: 6px; margin: 1rem 2rem 1rem 0; max-width: 600px;">
-  <strong>I design AI systems for Social Impact.</strong> My research focuses on building and improving human-centered AI systems that integrate participatory design and interdisciplinary methods. I'm particularly interested in medical contexts such as women's reproductive health.
+  <strong>I design AI systems for Social Impact.</strong> My research focuses on building human-centered AI systems that solve societal challenges. I integrate participatory design and interdisciplinary methods into my work. I'm particularly interested in medical contexts such as women's reproductive health.
 </div>
 
 
 
-Before my PhD, I was an R&D Embedded Software Engineer at [**Stryker**](https://www.stryker.com/us/en/index.html) in the medical division where I developed PCBs for hospital bed ecosystems and medical monitoring technologies. 
+Previously, I was an R&D Embedded Software Engineer at [**Stryker**](https://www.stryker.com/us/en/index.html), where I developed PCBs for hospital bed ecosystems and medical monitoring technologies. I primarily worked in the medical division.
 
-Outside of research, I enjoy making music—both by playing violin in the University of Michigan’s [**Campus Symphony Orchestra**](https://sites.google.com/a/umich.edu/campus-orchestras/) and composing in FL Studio. I also love crocheting, cooking (eating), and playing video games.
+Outside of research, I enjoy making music—both by playing violin in the University of Michigan’s [**Campus Symphony Orchestra**](https://sites.google.com/a/umich.edu/campus-orchestras/) and composing in FL Studio. I also love crocheting, cooking, and playing video games.
+
+
+
+<br> 
+
+---
 
 ## News
 

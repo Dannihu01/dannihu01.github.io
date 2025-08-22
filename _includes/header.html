@@ -1,0 +1,28 @@
+<!-- _includes/header.html -->
+<header class="site-header" role="banner">
+  <nav class="nav" aria-label="Primary">
+    <!-- Changed .brand to just be a menu-style link -->
+    <a class="menu-link" href="{{ site.baseurl | default: '/' }}">Danniell Hu</a>
+
+    <button
+      class="nav-toggle"
+      aria-controls="primary-menu"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="bar" aria-hidden="true"></span>
+      <span class="bar" aria-hidden="true"></span>
+      <span class="bar" aria-hidden="true"></span>
+    </button>
+
+    <div id="primary-menu" class="menu">
+      <a href="{{ site.baseurl }}/">Home</a>
+      <a href="{{ site.baseurl }}/publications/">Publications</a>
+      <a href="{{ site.baseurl }}/gallery/">Gallery</a>
+      <!--
+      <a href="{{ site.baseurl }}/talks/">Talks</a>
+      <a href="{{ site.baseurl }}/cv/">CV</a>
+      -->
+    </div>
+  </nav>
+</header>

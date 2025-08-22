@@ -9,16 +9,8 @@
         <meta content="width=device-width, initial-scale=1" name="viewport">
         <link rel="stylesheet" href="{{site.baseurl}}/assets/css/main.css">
 
-        {% include navigation.html %}
 
-        <hr class="separator">
-
-        <h1 class="post-headline">{{ page.title | default: site.title }}</h1>
-        
-        <h3 class="post-description">{{ page.description | default: site.description }}</h3>
-
-
-        
+        <br>
 
         {% seo %}
 
@@ -26,25 +18,50 @@
 
         {% include mathjax.html %}
 
-        <!-- Load fontawesome here for faster loadtimes: https://stackoverflow.com/a/35880730/9523246 -->
+
         <script type="text/javascript"> (function() { var css = document.createElement('link'); css.href = 'https://use.fontawesome.com/releases/v5.11.0/css/all.css'; css.rel = 'stylesheet'; css.type = 'text/css'; document.getElementsByTagName('head')[0].appendChild(css); })(); </script>
     </head>
 
-    <body>
-        <main>
-            <article>
-                {{ content }}
-            </article>
-        </main>
 
-        <footer>
-          <p class="copy">
-            <small> &copy; {{site.title}} {{ site.time | date: '%Y' }}
-                    | Powered by Jekyll and
-                    <a target="_blank" href="https://github.com/jitinnair1/gradfolio/">Gradfolio</a>.
-                    Last updated on {{ site.time | date_to_long_string }}
-            </small>
-          </p>
+    <script>
+    (function () {
+    const btn = document.querySelector('.nav-toggle');
+    const menu = document.getElementById('primary-menu');
+    if (!btn || !menu) return;
+
+    function closeOnEscape(e) {
+        if (e.key === 'Escape') {
+        menu.classList.remove('is-open');
+        btn.setAttribute('aria-expanded', 'false');
+        btn.focus();
+        }
+    }
+
+    btn.addEventListener('click', () => {
+        const open = menu.classList.toggle('is-open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        if (open) document.addEventListener('keydown', closeOnEscape, { once: true });
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!menu.classList.contains('is-open')) return;
+        if (!e.target.closest('.nav')) {
+        menu.classList.remove('is-open');
+        btn.setAttribute('aria-expanded', 'false');
+        }
+    });
+    })();
+
+
+    </script>
+{% include header.html %}
+        <body>
+        
+        <br>
+
+        <main class="page-content" aria-label="Content">
+            {{ content }}
+        </main>
 
         {% include social-footer.html %}
 
@@ -52,6 +69,11 @@
 
         {% include analytics.html %}
 
-    </body>
+        </body>
+
+
+
+
+        
 
 </html>
