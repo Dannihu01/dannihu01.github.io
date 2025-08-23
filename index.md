@@ -15,8 +15,15 @@ I'm a second year PhD student in Computer Science at the University of Michigan,
   <strong>I design AI systems for Social Impact.</strong> My research focuses on building human-centered AI systems that integrate participatory design and interdisciplinary methods. I'm particularly interested in medical contexts such as women's reproductive health.
 </div> -->
 
-<div style="background-color: #e6f0fa; border-left: 4px solid #005fa3; padding: 1rem; border-radius: 6px; margin: 1rem 2rem 1rem 0; max-width: 600px;">
-  <strong>I design AI systems for Social Impact.</strong> My research focuses on building human-centered AI systems that solve societal challenges. I integrate participatory design and interdisciplinary methods into my work. I'm particularly interested in medical contexts such as women's reproductive health.
+<div style="background-color: #e6f0fa; border-left: 4px solid #005fa3; border-right: 4px solid #005fa3;padding: 1rem; border-radius: 6px; margin: 1rem 2rem 1rem 0; max-width: 620px;">
+  <strong>My research is in AI for Social Impact (AISI). I study how we can design human-centered AI systems to address pressing societal challenges.</strong>  
+  My work sits at the intersection of artificial intelligence, software engineering, and psychology, with a focus on participatory-driven approaches.  I'm particularly interested in medical contexts such as women's reproductive health.
+</div>
+
+<div style="background-color: #e6f0fa; border-left: 4px solid #005fa3; border-right: 4px solid #005fa3; padding: 1rem; border-radius: 6px; margin: 1rem 2rem 1rem 0;">
+<strong>Why is this important?</strong>  
+  AI technologies are increasingly deployed in areas such as healthcare, conservation, and social services, which are domains where decisions directly affect people's lives. However, many AI systems fail because they are misaligned with the needs, values, and priorities of the communities they are meant to serve. Without intentional design practices, we risk building tools that reinforce inequities, waste resources, and cause harm.  
+
 </div>
 
 
