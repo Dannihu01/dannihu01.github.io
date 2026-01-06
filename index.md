@@ -9,7 +9,7 @@ published: true
 
 Hi! My name is Danniell, but I usually go by Danni. 
 
-I'm a second year PhD student in Computer Science at the University of Michigan, where I have the pleasure of working with Professor [**Elizabeth Bondi-Kelly**](https://sites.google.com/view/elizabethbondi) in the [**Realize Lab**](https://sites.google.com/view/realize-lab) and Professor [**Westley Weimer**](https://web.eecs.umich.edu/~weimerw/) in the Weimer Research Group.
+I'm a PhD Candidate in Computer Science at the University of Michigan, where I have the pleasure of working with Professor [**Elizabeth Bondi-Kelly**](https://sites.google.com/view/elizabethbondi) in the [**Realize Lab**](https://sites.google.com/view/realize-lab) and Professor [**Westley Weimer**](https://web.eecs.umich.edu/~weimerw/) in the Weimer Research Group.
 
 <!-- <div style="background: #f0f8ff; border-left: 4px solid #007bc0; padding: 1rem; margin: 1rem 2rem 1rem 0; max-width: 600px;">
   <strong>I design AI systems for Social Impact.</strong> My research focuses on building human-centered AI systems that integrate participatory design and interdisciplinary methods. I'm particularly interested in medical contexts such as women's reproductive health.
