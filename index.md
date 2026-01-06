@@ -31,9 +31,9 @@ I'm a second year PhD student in Computer Science at the University of Michigan,
 
 Previously, I was an R&D Embedded Software Engineer at [**Stryker**](https://www.stryker.com/us/en/index.html), where I developed PCBs for hospital bed ecosystems and medical monitoring technologies. I primarily worked in the medical division.
 
-Outside of research, I enjoy making music—both by playing violin in the University of Michigan’s [**Campus Symphony Orchestra**](https://sites.google.com/a/umich.edu/campus-orchestras/) and composing in FL Studio. I also love crocheting, cooking, and playing video games.
+Outside of research, music is a huge part of my life. I play violin in the University of Michigan’s [**Campus Symphony Orchestra**](https://sites.google.com/a/umich.edu/campus-orchestras/) and I’m always looking for new music to listen to. 
 
-
+I also love working with my hands (crocheting, sewing, cricut-ing, etc.), cooking, and playing video games. Recently, I've become Grandmaster in Teamfight Tactics! 
 
 <br> 
 
@@ -44,10 +44,41 @@ Outside of research, I enjoy making music—both by playing violin in the Univer
 {% assign news_items = site.news | sort: "date" | reverse %}
 <ul class="news-list">
   {% for news in news_items %}
-    <li>
-      <strong>{{ news.date | date: "%B %d, %Y" }}:</strong>
-      <a href="{{ site.baseurl }}{{ news.publication_url }}">{{ news.title }}</a>
-      <p>{{ news.content | strip_html | truncatewords: 150 }}</p>
+    <li style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid #ccc;">
+
+      <div style="display: flex; align-items: baseline; gap: 0.5rem; flex-wrap: wrap;">
+        <strong>{{ news.date | date: "%B %d, %Y" }}:</strong>
+        <span style="color: #005fa3; font-weight: 700;">{{ news.title }}</span>
+
+        {% if news.publication_url and news.publication_url != "" %}
+          <a href="{{ news.publication_url }}" target="_blank" rel="noopener"
+             style="margin-right: auto; display: inline-block; padding: 0.25rem 0.7rem;
+                    font-size: 0.85rem; font-weight: 600; background-color: #D1E3FF;
+                    color: #005fa3; border: 2px solid #005fa3; text-decoration: none;
+                    border-radius: 6px;">
+            Read more
+          </a>
+        {% endif %}
+      </div>
+
+      {% if news.image %}
+        <div style="margin: 0.75rem 0 0.25rem 0;">
+          <img src="{{ news.image | relative_url }}"
+               alt="{{ news.title }}"
+               style="max-width: 100%; height: auto; border-radius: 6px; display: block;">
+        </div>
+
+        {% if news.image_credit %}
+          <div style="margin: 0 0 0.9rem 0; font-size: 0.9rem; color: #555;">
+            {{ news.image_credit }}
+          </div>
+        {% endif %}
+      {% endif %}
+
+      <p style="margin: 0.5rem 0 0 0;">
+        {{ news.content | strip_html | truncatewords: 150 }}
+      </p>
+
     </li>
   {% endfor %}
 </ul>
