@@ -23,6 +23,8 @@ published: true
 
 <p class="resume-fallback">
   If the PDF preview doesn’t load, you can
-  <a href="{{ '/assets/files/resume.pdf' | relative_url }}">open it in a new tab</a>.
+  <a href="{{ '/assets/files/resume.pdf' | relative_url }}" target="_blank" rel="noopener">
+    open it in a new tab
+  </a>.
 </p>
 
