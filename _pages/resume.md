@@ -11,7 +11,7 @@ published: true
   </a>
 </div>
 
-<div class="resume-embed">
+<!-- <div class="resume-embed">
   <iframe
     src="{{ '/assets/files/Danniell_Resume.pdf' | relative_url }}"
     width="100%"
@@ -19,7 +19,15 @@ published: true
     style="border: 0;"
     title="Resume PDF">
   </iframe>
+</div> -->
+
+<div class="resume-embed">
+  <iframe
+    src="{{ '/assets/files/Danniell_Resume.pdf' | relative_url }}"
+    title="Resume PDF">
+  </iframe>
 </div>
+
 
 <p class="resume-fallback">
   If the PDF preview doesn’t load, you can

@@ -66,14 +66,17 @@ body {
 /* Resume PDF embed container */
 .resume-embed {
   width: 100%;
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto;
-  height: 150vh;          /* BIG visible height */
-  min-height: 800px;     /* safety for large screens */
+
+  /* Key: use viewport height */
+  height: calc(100vh - 160px); 
+  min-height: 700px;
+
   overflow: hidden;
 }
 
-/* Force embedded PDF to fill container (beat theme CSS) */
+/* Force iframe to fully fill container */
 .resume-embed iframe,
 .resume-embed embed,
 .resume-embed object {
