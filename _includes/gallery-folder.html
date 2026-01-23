@@ -1,0 +1,40 @@
+{%- comment -%}
+Reusable gallery include.
+Renders all images in a given folder as a grid.
+Captions are auto-generated from filenames.
+Usage:
+  {% include gallery-folder.html folder="/assets/images/Orchestra/" %}
+{%- endcomment -%}
+
+{%- assign folder = include.folder -%}
+{%- assign alt_prefix = include.alt_prefix | default: "Image" -%}
+
+<div class="gallery">
+  {%- assign files = site.static_files
+    | where_exp: "f", "f.path contains folder"
+    | sort: "path"
+  -%}
+
+  {%- for f in files -%}
+    {%- assign ext = f.extname | downcase -%}
+    {%- if ext == ".jpg" or ext == ".jpeg" or ext == ".png" or ext == ".webp" or ext == ".gif" -%}
+
+      {%- assign filename = f.path | split: "/" | last -%}
+      {%- assign base = filename | split: "." | first -%}
+      {%- assign caption = base | replace: "_", " " | replace: "-", " " -%}
+
+      <figure class="gallery-item">
+        <img
+          src="{{ f.path | relative_url }}"
+          alt="{{ alt_prefix }} {{ forloop.index }}"
+          onclick="openModal(this)"
+          loading="lazy"
+          decoding="async"
+        >
+        <figcaption class="caption">{{ caption }}</figcaption>
+      </figure>
+
+    {%- endif -%}
+  {%- endfor -%}
+</div>
+

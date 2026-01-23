@@ -1,6 +1,6 @@
 ---
 title: Gallery
-description: 
+description:
 layout: default
 permalink: /gallery/
 published: true
@@ -10,94 +10,88 @@ Welcome to my gallery! Click tabs to see what I've been up to.
 
 <!-- Tab structure -->
 <div class="tabs">
-  <button class="tablink active" onclick="openTab(event, 'undergrad')">Undergrad Graduation</button>
-  <button class="tablink" onclick="openTab(event, 'orchestra')">Orchestra</button>
-  <button class="tablink" onclick="openTab(event, 'food')">Food</button>
+  <button class="tablink active" onclick="openTab(event, 'wedding')">Our Wedding ♥️</button>
+  <button class="tablink" onclick="openTab(event, 'undergrad')">Undergrad Graduation</button>
+  <button class="tablink" onclick="openTab(event, 'orchestra')">Violin & Orchestra</button>
   <button class="tablink" onclick="openTab(event, 'travel')">Travel & Nature</button>
+  <button class="tablink" onclick="openTab(event, 'food')">Food</button>
+</div>
+
+
+
+<!-- Wedding Tab -->
+<div id="wedding" class="tabcontent active">
+  <h2>Our Wedding ♥️ 12-20-2025</h2>
+  <p class="wedding-credit">
+    Thank you to 
+    <a href="https://www.instagram.com/tabronstudios_/?hl=en" target="_blank" rel="noopener">Kalynn Tabron</a> 
+    with 
+    <a href="https://www.oncelikeaspark.com/" target="_blank" rel="noopener">Once Like a Spark</a> 
+    for the lovely photos
+  </p>
+    
+
+  {% include gallery-folder.html folder="/assets/images/Wedding/" alt_prefix="Wedding" %}
 </div>
 
 <!-- Undergrad Graduation Tab -->
-<div id="undergrad" class="tabcontent active">
-  <h2>Undergrad Graduation</h2>
-  <img src="../assets/images/grad1.jpg" alt="Undergrad Graduation 1">
-  <p>In the Law Quad.</p>
-  <img src="../assets/images/grad2.jpg" alt="Undergrad Graduation 2">
-  <p>My wonderful best friends.</p>
+<div id="undergrad" class="tabcontent">
+  <h2>Undergrad Graduation 🎓 4-29-2023</h2>
+  {% include gallery-folder.html folder="/assets/images/Undergrad Graduation/" alt_prefix="Undergrad Graduation" %}
 </div>
 
-<!-- Orchestra Tab -->
 <div id="orchestra" class="tabcontent">
-  <h2>Orchestra</h2>
-  <img src="../assets/images/orchestra242.jpg" alt="Orchestra 4">
-  <img src="../assets/images/orchestra241.jpg" alt="Orchestra 3">
-  
-  <p>Late 2024</p>
-  <img src="../assets/images/orchestra21.jpg" alt="Orchestra 1">
-  <img src="../assets/images/orchestra213.jpg" alt="Orchestra 2">
-  <p>Early 2021</p>
-  
-</div>
+  <h2>Violin & Orchestra</h2>
 
+  <figure class="video-figure">
+  <div class="video-embed">
+    <iframe
+      src="https://www.youtube.com/embed/M450rkYvtC0"
+      title="YouTube video player"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen>
+    </iframe>
+  </div>
+  <figcaption class="caption">
+    Senior Year Concerto Competition (2019), Zigeunerweisen by Sarasate
+  </figcaption>
+</figure>
+
+  {% include gallery-folder.html folder="/assets/images/Orchestra/" alt_prefix="Orchestra" %}
+
+  
+
+</div>
+<!-- Travel and Nature Tab -->
+<div id="travel" class="tabcontent">
+  <h2>Travel and Nature</h2>
+  {% include gallery-folder.html folder="/assets/images/Travel&Nature/" alt_prefix="Travel and Nature" %}
+</div>
 
 <!-- Food Tab -->
 <div id="food" class="tabcontent">
   <h2>Food</h2>
-  <div class="gallery">
-    <img src="../assets/images/Food/IMG_1828_Original.JPG" alt="Food 1" onclick="openModal(this)">
-    <img src="../assets/images/Food/IMG_1986_Original.JPG" alt="Food 2" onclick="openModal(this)">
-    <img src="../assets/images/Food/IMG_2503_Original.JPG" alt="Food 3" onclick="openModal(this)">
-    <img src="../assets/images/Food/IMG_2505_Original.JPG" alt="Food 4" onclick="openModal(this)">
-    <img src="../assets/images/Food/IMG_2987_Original.JPG" alt="Food 5" onclick="openModal(this)">
-    <img src="../assets/images/Food/IMG_3016_Original.JPG" alt="Food 6" onclick="openModal(this)">
-    <img src="../assets/images/Food/IMG_3067_Original.JPG" alt="Food 7" onclick="openModal(this)">
-    <img src="../assets/images/Food/IMG_3162_Original.JPG" alt="Food 8" onclick="openModal(this)">
-    <img src="../assets/images/Food/IMG_3208_Original.JPG" alt="Food 9" onclick="openModal(this)">
-    <img src="../assets/images/Food/IMG_3624_Original.JPG" alt="Food 11" onclick="openModal(this)">
-    <img src="../assets/images/Food/IMG_3733_Original.JPG" alt="Food 12" onclick="openModal(this)">
-    <img src="../assets/images/Food/IMG_3738_Original.JPG" alt="Food 13" onclick="openModal(this)">
-    <img src="../assets/images/Food/IMG_3740_Original.JPG" alt="Food 14" onclick="openModal(this)">
-    <img src="../assets/images/Food/IMG_4467_Original.JPG" alt="Food 16" onclick="openModal(this)">
-    <img src="../assets/images/Food/IMG_5331_Original.JPG" alt="Food 17" onclick="openModal(this)">
-    <img src="../assets/images/Food/IMG_5394_Original.JPG" alt="Food 18" onclick="openModal(this)">
-  </div>
-</div>
-
-<!-- Travel and Nature Tab -->
-<div id="travel" class="tabcontent">
-  <h2>Travel and Nature</h2>
-  <div class="gallery">
-    <img src="../assets/images/Travel&Nature/IMG_1134_Original.JPG" alt="Travel and Nature 1" onclick="openModal(this)">
-    <img src="../assets/images/Travel&Nature/IMG_2969_Original.JPG" alt="Travel and Nature 2" onclick="openModal(this)">
-    <img src="../assets/images/Travel&Nature/IMG_4277_Original.JPG" alt="Travel and Nature 3" onclick="openModal(this)">
-    <img src="../assets/images/Travel&Nature/IMG_4308_Original.JPG" alt="Travel and Nature 4" onclick="openModal(this)">
-    <img src="../assets/images/Travel&Nature/IMG_5214_Original.JPG" alt="Travel and Nature 5" onclick="openModal(this)">
-    <img src="../assets/images/Travel&Nature/IMG_5851_Original.JPG" alt="Travel and Nature 6" onclick="openModal(this)">
-  </div>
+  {% include gallery-folder.html folder="/assets/images/Food/" alt_prefix="Food" %}
 </div>
 
 <footer style="text-align: center; margin-top: 20px; font-size: 14px; color: #555;">
-  &copy; 2025 [Danniell Hu]. All rights reserved. 
+  &copy; 2026 Danniell Hu. All rights reserved.
   These images are the property of Danniell Hu and may not be used or reproduced without permission.
 </footer>
 
 <div id="imageModal" class="modal" onclick="closeModal()">
   <span class="close" onclick="closeModal()">&times;</span>
   <img class="modal-content" id="modalImage">
-  <div id="caption"></div>
 </div>
 
-<!-- Tab functionality -->
 <script>
   function openTab(event, tabId) {
-    // Hide all tab contents
     const tabContents = document.querySelectorAll('.tabcontent');
     tabContents.forEach(content => content.classList.remove('active'));
 
-    // Remove active class from all tab links
     const tabLinks = document.querySelectorAll('.tablink');
     tabLinks.forEach(link => link.classList.remove('active'));
 
-    // Show the clicked tab and set it as active
     document.getElementById(tabId).classList.add('active');
     event.currentTarget.classList.add('active');
   }
@@ -105,35 +99,30 @@ Welcome to my gallery! Click tabs to see what I've been up to.
   function openModal(img) {
     const modal = document.getElementById('imageModal');
     const modalImg = document.getElementById('modalImage');
-    const captionText = document.getElementById('caption');
 
     modal.style.display = "block";
     modalImg.src = img.src;
-    captionText.innerHTML = img.alt;
   }
 
-  // Close the modal
   function closeModal() {
-    const modal = document.getElementById('imageModal');
-    modal.style.display = "none";
+    document.getElementById('imageModal').style.display = "none";
   }
-
-
 </script>
 
 <style>
-  /* Tab styles */
+  /* Tabs */
   .tabs {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
     margin-bottom: 20px;
   }
   .tablink {
-    padding: 15px 30px;
+    padding: 12px 18px;
     cursor: pointer;
     background-color: #f0f0f0;
-    margin: 0 5px;
-    border-radius: 5px;
+    border-radius: 8px;
     border: 1px solid #ccc;
   }
   .tablink.active {
@@ -141,73 +130,142 @@ Welcome to my gallery! Click tabs to see what I've been up to.
     color: white;
     border-color: #007BFF;
   }
-  .tabcontent {
-    display: none;
-    text-align: center;
-  }
-  .tabcontent.active {
-    display: block;
-  }
-  .tabcontent img {
-    max-width: 100%;
-    margin: 10px 0;
-  }
 
-  /* Gallery Images */
-  .gallery img {
-    width: auto ; /* Adjust as needed */
-    height: auto;
-    margin: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: transform 0.2s; /* Add hover effect */
-  }
-  .gallery img:hover {
-    transform: scale(1.05); /* Slight zoom on hover */
-  }
+  .tabcontent { display: none; text-align: center; }
+  .tabcontent.active { display: block; }
 
+  /* Gallery grid */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+  margin-top: 10px;
+}
+.wedding-credit {
+  margin-bottom: 20px;  /* space below the line */
+  font-size: 1rem;     /* optional: match body text */
+}
+
+/* Make each tile a consistent crop box */
+.gallery-item {
+  aspect-ratio: 3 / 4;   /* square tiles; change to 4/3 or 3/2 if you prefer */
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 16px; 
+}
+
+
+.caption {
+  margin-top: 6px;
+  margin-bottom: 6px;   /* small space after caption */
+}
+
+/* Crop-to-fill */
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;      /* key: crops instead of distorting */
+  object-position: center;/* crop from center */
+  display: block;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.02);
+}
+
+/* Responsive YouTube embed */
+.video-embed {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;       /* was 0 auto 16px */
+  aspect-ratio: 16 / 9;
+}
+
+
+.video-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 8px;
+}
+
+.video-figure {
+  max-width: 960px;
+  margin: 0 auto 16px; 
+  text-align: center;
+}
+
+
+.video-figure .caption {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
   /* Modal */
   .modal {
-    display: none; /* Hidden by default */
+    display: none;
     position: fixed;
     z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.9); /* Black background with transparency */
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
   }
-
-  /* Modal Content */
   .modal-content {
-    margin: auto;
+    margin: 5vh auto;
     display: block;
-    max-width: 90%;
-    max-height: 90%;
+    max-width: 92vw;
+    max-height: 90vh;
   }
-
-  /* Caption */
-  #caption {
-    text-align: center;
-    color: white;
-    padding: 10px 20px;
-    font-size: 16px;
-  }
-
-  /* Close Button */
   .close {
-    position: absolute;
-    top: 20px;
-    right: 35px;
+    position: fixed;
+    top: 18px;
+    right: 26px;
     color: white;
-    font-size: 30px;
+    font-size: 34px;
     font-weight: bold;
     cursor: pointer;
   }
-  .close:hover, .close:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
-  }
+  .close:hover { color: #bbb; }
+
+#undergrad .gallery {
+  grid-template-columns: 1fr;   /* one per row */
+  gap: 8px;                     /* small, normal spacing */
+}
+
+#undergrad .gallery-item {
+  aspect-ratio: auto;          /* remove forced tile height */
+  overflow: visible;
+}
+
+#undergrad .gallery-item img {
+  width: 100%;
+  height: auto;                /* natural height */
+  object-fit: contain;        /* no cropping */
+  display: block;
+}
+
+#orchestra .gallery {
+  grid-template-columns: 1fr;   /* one per row */
+  gap: 8px;                     /* small, normal spacing */
+}
+
+#orchestra .gallery-item {
+  aspect-ratio: auto;          /* remove forced tile height */
+  overflow: visible;
+}
+
+#orchestra .gallery-item img {
+  width: 100%;
+  height: auto;                /* natural height */
+  object-fit: contain;        /* no cropping */
+  display: block;
+}
+
+#orchestra .video-figure {
+  margin-bottom: 32px;  /* increase space before first photo */
+}
 </style>
