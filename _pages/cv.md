@@ -1,15 +1,23 @@
 ---
-title:
+title: CV
 layout: default
 permalink: /cv/
 published: true
 ---
 
-# Curriculum Vitae
+{% assign cv_pdf = '/assets/files/cv.pdf?v=2026-01-23' %}
 
-Below, you can view my CV directly or [click here to download it](../assets/cv.pdf).
+<div class="resume-header">
+  <a class="resume-download" href="{{ cv_pdf | relative_url }}" download>
+    Download CV (PDF)
+  </a>
+</div>
 
-<iframe src="../assets/cv.pdf" width="100%" height="1000px" style="border: none;">
-    Your browser does not support viewing PDFs. 
-    <a href="../assets/cv.pdf">Download the PDF</a> to view it.
-</iframe>
+<div class="resume-embed">
+  <iframe src="{{ cv_pdf | relative_url }}" title="CV PDF"></iframe>
+</div>
+
+<p class="resume-fallback">
+  If the PDF preview doesn’t load, you can
+  <a href="{{ cv_pdf | relative_url }}" target="_blank" rel="noopener">open it in a new tab</a>.
+</p>
