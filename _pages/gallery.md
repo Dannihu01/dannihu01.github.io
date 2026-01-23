@@ -6,8 +6,9 @@ permalink: /gallery/
 published: true
 ---
 
-Welcome to my gallery! Click tabs to see what I've been up to.
-
+<p class="gallery-intro">
+  Click a tab below to switch galleries and see what I've been up to.
+</p>
 <!-- Tab structure -->
 <div class="tabs">
   <button class="tablink active" onclick="openTab(event, 'wedding')">Our Wedding ♥️</button>
@@ -70,13 +71,13 @@ Welcome to my gallery! Click tabs to see what I've been up to.
 
 <!-- Food Tab -->
 <div id="food" class="tabcontent">
-  <h2>Food</h2>
+  <h2>Food 😋</h2>
   {% include gallery-folder.html folder="/assets/images/Food/" alt_prefix="Food" %}
 </div>
 
 <footer style="text-align: center; margin-top: 20px; font-size: 14px; color: #555;">
   &copy; 2026 Danniell Hu. All rights reserved.
-  These images are the property of Danniell Hu and may not be used or reproduced without permission.
+  These images may not be used or reproduced without permission.
 </footer>
 
 <div id="imageModal" class="modal" onclick="closeModal()">
@@ -110,29 +111,61 @@ Welcome to my gallery! Click tabs to see what I've been up to.
 </script>
 
 <style>
-  /* Tabs */
-  .tabs {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 20px;
-  }
-  .tablink {
-    padding: 12px 18px;
-    cursor: pointer;
-    background-color: #f0f0f0;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-  }
-  .tablink.active {
-    background-color: #007BFF;
-    color: white;
-    border-color: #007BFF;
-  }
 
-  .tabcontent { display: none; text-align: center; }
-  .tabcontent.active { display: block; }
+
+/* Tabs */
+.tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;                 /* more space between buttons */
+  margin-bottom: 28px;      /* more separation from content */
+}
+
+.tablink {
+  padding: 16px 28px;       /* bigger click target */
+  font-size: 1.05rem;       /* slightly larger text */
+  font-weight: 600;         /* bolder text */
+  cursor: pointer;
+  background-color: #f5f5f5;
+  border-radius: 12px;      /* rounder = more button-y */
+  border: 2px solid #ccc;   /* thicker border */
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    transform 0.1s ease,
+    box-shadow 0.1s ease;
+}
+
+/* Hover state */
+.tablink:hover {
+  background-color: #e9e9e9;
+  border-color: #999;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* Active tab */
+.tablink.active {
+  background-color: #007BFF;
+  color: white;
+  border-color: #007BFF;
+  box-shadow: 0 6px 14px rgba(0,123,255,0.35);
+  transform: translateY(0);
+}
+
+.tabcontent { 
+  display: none; 
+  text-align: center; 
+}
+
+.tabcontent.active { 
+  display: block; 
+}
+
+
+
+
 
   /* Gallery grid */
 .gallery {
@@ -146,6 +179,18 @@ Welcome to my gallery! Click tabs to see what I've been up to.
   font-size: 1rem;     /* optional: match body text */
 }
 
+.gallery-intro {
+  text-align: center;
+  margin: 15px auto 36px;  /* was 18px → now more space below */
+  max-width: 900px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #222;
+  background: #fafafa;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 12px 16px;
+}
 /* Make each tile a consistent crop box */
 .gallery-item {
   aspect-ratio: 3 / 4;   /* square tiles; change to 4/3 or 3/2 if you prefer */

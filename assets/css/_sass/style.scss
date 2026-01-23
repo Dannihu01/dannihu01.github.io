@@ -22,6 +22,42 @@ body {
   background-color: #F5FBFF; /* fallback behind pattern */
 }
 
+.resume-header {
+  display: flex;
+  justify-content: center;
+  margin: 12px 0 18px;
+}
+
+.resume-download {
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 2px solid #000080;
+  background: #f0f0f0;
+  text-decoration: none;
+  color: inherit;
+}
+
+.resume-download:hover {
+  opacity: 0.75;
+  color: #000080;
+}
+
+.resume-embed {
+  width: 100%;
+  height: 150vh; /* adjust as you like */
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.resume-fallback {
+  text-align: center;
+  margin-top: 12px;
+  font-size: 14px;
+  color: #555;
+}
+
+
 .highlight-box {
   border: 1px solid #ccc;
   background-color: #f9f9f9;
@@ -216,6 +252,7 @@ blockquote {
   font-weight: 600;
   border-radius: 8px;
   padding: 13px 23px;
+  margin-top: 16px;
   border: 1px solid #222222;
   transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s, -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s;
   background: #fff;

@@ -2,7 +2,10 @@
 footer {
     clear: both;
     margin-top: 2em;
+    margin-bottom: 40px;   /* space after footer */
+    padding-bottom: 20px; /* extra breathing room */
 }
+
 
 /* Footer navigation links */
 .links a {
