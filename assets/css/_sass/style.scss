@@ -22,6 +22,16 @@ body {
   background-color: #F5FBFF; /* fallback behind pattern */
 }
 
+.resume-embed iframe,
+.resume-embed embed,
+.resume-embed object {
+  width: 100%;
+  height: 100% !important; /* force-fill even if theme overrides */
+  border: 0;
+  display: block;
+}
+
+
 .resume-header {
   display: flex;
   justify-content: center;
@@ -45,10 +55,19 @@ body {
 
 .resume-embed {
   width: 100%;
-  height: 150vh; /* adjust as you like */
+  height: 150vh;       /* your intended height */
+  min-height: 800px;   /* optional, but helps on large screens */
   max-width: 1000px;
   margin: 0 auto;
 }
+
+.resume-embed iframe {
+  width: 100%;
+  height: 100% !important;  /* key: defeat theme overrides */
+  border: 0;
+  display: block;
+}
+
 
 .resume-fallback {
   text-align: center;
