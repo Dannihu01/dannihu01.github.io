@@ -66,7 +66,30 @@ published: true
 <!-- Travel and Nature Tab -->
 <div id="travel" class="tabcontent">
   <h2>Travel and Nature</h2>
-  {% include gallery-folder.html folder="/assets/images/Travel&Nature/" alt_prefix="Travel and Nature" %}
+  <h5>A non-exhaustive collection of my wonderful exploration of the world</h5>
+
+  {% assign base_path = "/assets/images/Travel&Nature/" %}
+  {% assign folders = "" | split: "" %}
+
+  {% for file in site.static_files %}
+    {% if file.path contains base_path %}
+      {% assign relative = file.path | remove: base_path %}
+      {% assign folder = relative | split: "/" | first %}
+
+      {% unless folders contains folder %}
+        {% assign folders = folders | push: folder %}
+      {% endunless %}
+    {% endif %}
+  {% endfor %}
+
+  {% for folder in folders %}
+    {% capture folder_path %}{{ base_path }}{{ folder }}/{% endcapture %}
+
+    <div class="gallery-section">
+      <h3>{{ folder | replace: "-", " " | replace: "_", " " }}</h3>
+      {% include gallery-folder.html folder=folder_path alt_prefix=folder %}
+    </div>
+  {% endfor %}
 </div>
 
 <!-- Food Tab -->
@@ -313,4 +336,25 @@ published: true
 #orchestra .video-figure {
   margin-bottom: 32px;  /* increase space before first photo */
 }
+
+#travel h2 {
+  margin-bottom: 4px;              /* tighten gap to subtitle */
+  color: $brand-color;             /* uses your site’s primary color */
+}
+
+#travel h5 {
+  margin-top: 0;                   /* remove default gap */
+  margin-bottom: 28px;             /* space before first images */
+  color: $text-color;              /* consistent with your theme */
+  font-weight: 400;                /* lighter subtitle feel */
+}
+
+/* Section headers (folder names) */
+#travel .gallery-section h3 {
+  margin-top: 32px;
+  margin-bottom: 12px;
+  color: $brand-color;
+}
+
 </style>
+

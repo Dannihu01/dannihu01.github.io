@@ -29,11 +29,11 @@ I'm a second-year PhD Candidate in Computer Science at the University of Michiga
 
 
 
-Previously, I was an R&D Embedded Software Engineer at [**Stryker**](https://www.stryker.com/us/en/index.html), where I developed PCBs for hospital bed ecosystems and medical monitoring technologies. I primarily worked in the medical division.
+Previously, I was an R&D Embedded Software Engineer at [**Stryker**](https://www.stryker.com/us/en/index.html), where I developed PCBs and software for hospital bed ecosystems and medical monitoring technologies. I primarily worked in the medical division.
 
-Outside of research, music is a huge part of my life. I play violin in the University of Michigan’s [**Campus Symphony Orchestra**](https://sites.google.com/a/umich.edu/campus-orchestras/) and I’m always looking for new music to listen to. 
+Outside of research, music is a huge part of my life. I've been playing violin for 18 years (and counting!) and continue to be involved by playing in the University of Michigan’s [**Campus Symphony Orchestra**](https://sites.google.com/a/umich.edu/campus-orchestras/). I’m always looking for new music to listen to. 
 
-I also love working with my hands (crocheting, sewing, cricut-ing, etc.), cooking, and playing video games. Recently, I've become Grandmaster in Teamfight Tactics! 
+I also love working with my hands (crocheting, sewing, building computers, gardening), cooking, and playing multiplayer competitive video games. I also really enjoy going fishing! 
 
 <br> 
 
