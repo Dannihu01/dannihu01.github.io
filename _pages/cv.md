@@ -7,17 +7,17 @@ published: true
 
 {% assign cv_pdf = '/assets/files/cv.pdf?v=2026-01-23' %}
 
-<div class="resume-header">
-  <a class="resume-download" href="{{ cv_pdf | relative_url }}" download>
+<div class="cv-header">
+  <a class="cv-download" href="{{ cv_pdf | relative_url }}" download>
     Download CV (PDF)
   </a>
 </div>
 
-<div class="resume-embed">
+<div class="cv-embed">
   <iframe src="{{ cv_pdf | relative_url }}" title="CV PDF"></iframe>
 </div>
 
-<p class="resume-fallback">
+<p class="cv-fallback">
   If the PDF preview doesn’t load, you can
   <a href="{{ cv_pdf | relative_url }}" target="_blank" rel="noopener">open it in a new tab</a>.
 </p>

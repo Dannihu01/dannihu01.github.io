@@ -24,20 +24,20 @@ body {
 
 
 /* =========================
-   Resume Page Styles
+   cv Page Styles
    ========================= */
 
 /* Container for download button */
-.resume-header {
+.cv-header {
   display: flex;
   justify-content: center;
   margin: 16px 0 20px;
 }
 
 /* Download button — override theme link styles */
-.resume-header a.resume-download,
-.resume-header a.resume-download:link,
-.resume-header a.resume-download:visited {
+.cv-header a.cv-download,
+.cv-header a.cv-download:link,
+.cv-header a.cv-download:visited {
   display: inline-block;
   padding: 12px 18px;
   border-radius: 12px;
@@ -54,8 +54,8 @@ body {
     transform 0.1s ease;
 }
 
-.resume-header a.resume-download:hover,
-.resume-header a.resume-download:focus {
+.cv-header a.cv-download:hover,
+.cv-header a.cv-download:focus {
   background: #e9e9e9;
   border-color: #999;
   box-shadow: 0 4px 10px rgba(0,0,0,0.08);
@@ -63,8 +63,8 @@ body {
   text-decoration: none;
 }
 
-/* Resume PDF embed container */
-.resume-embed {
+/* cv PDF embed container */
+.cv-embed {
   width: 100%;
   max-width: 1100px;
   margin: 0 auto;
@@ -77,9 +77,9 @@ body {
 }
 
 /* Force iframe to fully fill container */
-.resume-embed iframe,
-.resume-embed embed,
-.resume-embed object {
+.cv-embed iframe,
+.cv-embed embed,
+.cv-embed object {
   width: 100%;
   height: 100% !important;
   border: 0;
@@ -87,7 +87,7 @@ body {
 }
 
 /* Fallback text under embed */
-.resume-fallback {
+.cv-fallback {
   text-align: center;
   margin: 14px auto 24px;
   font-size: 14px;
