@@ -5,7 +5,7 @@ permalink: /cv/
 published: true
 ---
 
-{% assign cv_pdf = '/assets/files/cv.pdf?v=2026-01-23' %}
+{% assign cv_pdf = '/assets/files/danni_cv.pdf' %}
 
 <div class="cv-header">
   <a class="cv-download" href="{{ cv_pdf | relative_url }}" download>
