@@ -1,6 +1,5 @@
 ---
-title:
-description: 
+title: Publications
 layout: default
 permalink: /publications/
 published: true
