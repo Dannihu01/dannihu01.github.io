@@ -1,0 +1,268 @@
+/* ========================
+   Gallery Page Styles
+======================== */
+
+.gallery-intro {
+  text-align: center;
+  margin: 15px auto 36px;
+  max-width: 900px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #222;
+  background: #fafafa;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 12px 16px;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.tablink {
+  padding: 16px 28px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: #f5f5f5;
+  border-radius: 12px;
+  border: 2px solid #ccc;
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    transform 0.1s ease,
+    box-shadow 0.1s ease;
+
+  &:hover {
+    background-color: #e9e9e9;
+    border-color: #999;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  }
+
+  &.active {
+    background-color: #007BFF;
+    color: white;
+    border-color: #007BFF;
+    box-shadow: 0 6px 14px rgba(0, 123, 255, 0.35);
+    transform: translateY(0);
+  }
+}
+
+.tabcontent {
+  display: none;
+  text-align: center;
+
+  &.active {
+    display: block;
+  }
+}
+
+.wedding-credit {
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+/* Gallery grid */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+  margin-top: 10px;
+}
+
+.gallery-item {
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 16px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    cursor: pointer;
+    transition: transform 0.2s;
+
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+}
+
+.caption {
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+/* Responsive YouTube embed */
+.video-embed {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  aspect-ratio: 16 / 9;
+
+  iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 8px;
+  }
+}
+
+.video-figure {
+  max-width: 960px;
+  margin: 0 auto 16px;
+  text-align: center;
+
+  .caption {
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+  margin: 5vh auto;
+  display: block;
+  max-width: 92vw;
+  max-height: 90vh;
+}
+
+.close {
+  position: fixed;
+  top: 18px;
+  right: 26px;
+  color: white;
+  font-size: 34px;
+  font-weight: bold;
+  cursor: pointer;
+
+  &:hover {
+    color: #bbb;
+  }
+}
+
+/* Brief description under each tab heading */
+.tab-description {
+  margin: 0 0 1.25rem;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* Travel: collapsible destination sections */
+.travel-destination {
+  border: 1px solid #dde7f0;
+  border-radius: 10px;
+  margin-bottom: 0.75rem;
+  overflow: hidden;
+  background: #f8fbff;
+
+  &[open] {
+    background: #fff;
+  }
+}
+
+.travel-destination-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.1rem;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: $brand-color;
+  cursor: pointer;
+  user-select: none;
+  list-style: none;
+
+  &::-webkit-details-marker { display: none; }
+
+  &::before {
+    content: "▶";
+    font-size: 0.7em;
+    transition: transform 0.2s ease;
+    color: #005fa3;
+  }
+}
+
+.travel-destination[open] .travel-destination-title::before {
+  transform: rotate(90deg);
+}
+
+.travel-destination .gallery-section {
+  padding: 0.5rem 1rem 1rem;
+}
+
+.gallery-page-footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Per-tab layout overrides */
+#undergrad,
+#orchestra {
+  .gallery {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .gallery-item {
+    aspect-ratio: auto;
+    overflow: visible;
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      display: block;
+    }
+  }
+}
+
+#orchestra .video-figure {
+  margin-bottom: 32px;
+}
+
+/* Travel section */
+#travel {
+  h2 {
+    margin-bottom: 4px;
+    color: $brand-color;
+  }
+
+  h5 {
+    margin-top: 0;
+    margin-bottom: 28px;
+    color: $text-color;
+    font-weight: 400;
+  }
+
+  .gallery-section h3 {
+    margin-top: 32px;
+    margin-bottom: 12px;
+    color: $brand-color;
+  }
+}

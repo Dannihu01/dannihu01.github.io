@@ -11,89 +11,55 @@ Hi! My name is Danniell, but I usually go by Danni.
 
 I'm a second-year PhD Candidate in Computer Science at the University of Michigan, where I have the pleasure of working with Professor [**Elizabeth Bondi-Kelly**](https://sites.google.com/view/elizabethbondi) in the [**Realize Lab**](https://sites.google.com/view/realize-lab) and Professor [**Westley Weimer**](https://web.eecs.umich.edu/~weimerw/) in the Weimer Research Group.
 
-<!-- <div style="background: #f0f8ff; border-left: 4px solid #007bc0; padding: 1rem; margin: 1rem 2rem 1rem 0; max-width: 600px;">
-  <strong>I design AI systems for Social Impact.</strong> My research focuses on building human-centered AI systems that integrate participatory design and interdisciplinary methods. I'm particularly interested in medical contexts such as women's reproductive health.
-</div> -->
-<!-- #e6f0fa -->
-
-<div style="background-color: #D1E3FF; border-left: 4px solid #005fa3; border-right: 4px solid #005fa3;padding: 1rem; border-radius: 6px; margin: 1rem 2rem 1rem 0; max-width: 620px;">
+<div class="research-highlight">
   <strong>My research is in AI for Social Impact (AISI). I study how we can design human-centered AI systems to address pressing societal challenges.</strong>  
-  My work sits at the intersection of artificial intelligence, software engineering, and psychology, with a focus on participatory-driven approaches.  I'm particularly interested in medical contexts such as women's reproductive health.
+  My work sits at the intersection of artificial intelligence, software engineering, and psychology, with a focus on participatory-driven approaches. I'm particularly interested in medical contexts such as women's reproductive health.
 </div>
-
-<!-- <div style="background-color: #e6f0fa; border-left: 4px solid #005fa3; border-right: 4px solid #005fa3; padding: 1rem; border-radius: 6px; margin: 1rem 2rem 1rem 0;">
-<strong>Why is this important?</strong>  
-  AI technologies are increasingly deployed in areas such as healthcare, conservation, and social services, which are domains where decisions directly affect people's lives. However, many AI systems fail because they are misaligned with the needs, values, and priorities of the communities they are meant to serve. Without intentional design practices, we risk building tools that reinforce inequities, waste resources, and cause harm.  
-
-</div> -->
-
-
 
 Previously, I was an R&D Embedded Software Engineer at [**Stryker**](https://www.stryker.com/us/en/index.html), where I developed PCBs and software for hospital bed ecosystems and medical monitoring technologies. I primarily worked in the medical division.
 
-Outside of research, music is a huge part of my life. I've been playing violin for 18 years (and counting!) and continue to be involved by playing in the University of Michigan’s [**Campus Symphony Orchestra**](https://sites.google.com/a/umich.edu/campus-orchestras/). I’m always looking for new music to listen to. 
-
-I also love working with my hands (crocheting, sewing, building computers, gardening), cooking, and playing multiplayer competitive video games. I also really enjoy going fishing! 
+Outside of research, music is a huge part of my life. I've been playing violin for 18 years (and counting!) and continue to be involved by playing in the University of Michigan's [**Campus Symphony Orchestra**](https://sites.google.com/a/umich.edu/campus-orchestras/). I also love working with my hands (crocheting, sewing, gardening), cooking, and playing multiplayer competitive video games. I also really enjoy going fishing! 
 
 <br> 
 
 ---
 
-## News
+<div class="news-section-heading"><h2>News</h2></div>
 
 {% assign news_items = site.news | sort: "date" | reverse %}
 <ul class="news-list">
   {% for news in news_items %}
-    <li style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid #ccc;">
+    <li class="news-item">
 
-      <div style="display: flex; align-items: baseline; gap: 0.5rem; flex-wrap: wrap;">
-        <strong>{{ news.date | date: "%B %d, %Y" }}:</strong>
-        <span style="color: #005fa3; font-weight: 700;">{{ news.title }}</span>
+      <time class="news-date-col" datetime="{{ news.date | date: '%Y-%m-%d' }}">
+        <span class="news-month-day">{{ news.date | date: "%b %d" }}</span>
+        <span class="news-year">{{ news.date | date: "%Y" }}</span>
+      </time>
 
-        {% if news.publication_url and news.publication_url != "" %}
-          <a href="{{ news.publication_url }}" target="_blank" rel="noopener"
-             style="margin-right: auto; display: inline-block; padding: 0.25rem 0.7rem;
-                    font-size: 0.85rem; font-weight: 600; background-color: #D1E3FF;
-                    color: #005fa3; border: 2px solid #005fa3; text-decoration: none;
-                    border-radius: 6px;">
-            Read more
-          </a>
-        {% endif %}
-      </div>
-
-      {% if news.image %}
-        <div style="margin: 0.75rem 0 0.25rem 0;">
-          <img src="{{ news.image | relative_url }}"
-               alt="{{ news.title }}"
-               style="max-width: 100%; height: auto; border-radius: 6px; display: block;">
+      <div class="news-body">
+        <div class="news-header">
+          <span class="news-title">{{ news.title }}</span>
+          {% if news.publication_url and news.publication_url != "" %}
+            <a href="{{ news.publication_url }}" target="_blank" rel="noopener" class="news-read-more">
+              Read more →
+            </a>
+          {% endif %}
         </div>
 
-        {% if news.image_credit %}
-          <div style="margin: 0 0 0.9rem 0; font-size: 0.9rem; color: #555;">
-            {{ news.image_credit }}
+        {% if news.image %}
+          <div class="news-image-wrapper">
+            <img src="{{ news.image | relative_url }}"
+                 alt="{{ news.title }}"
+                 class="news-image">
           </div>
+          {% if news.image_credit %}
+            <div class="news-image-credit">{{ news.image_credit }}</div>
+          {% endif %}
         {% endif %}
-      {% endif %}
 
-      <p style="margin: 0.5rem 0 0 0;">
-        {{ news.content | strip_html | truncatewords: 150 }}
-      </p>
+        <p class="news-content">{{ news.content | strip_html | truncatewords: 150 }}</p>
+      </div>
 
     </li>
   {% endfor %}
 </ul>
-
-
-
-<!-- [Gradfolio](https://github.com/jitinnair1/gradfolio){:target="_blank"} is a responsive, dark-mode ready Jekyll theme designed keeping academia in mind. The easiest way to install the theme is to fork it using GitHub. Check the README file for [instructions](https://github.com/jitinnair1/gradfolio#installation){:target="_blank"}.
-
-If you want to use this space to write your biography here, edit the `index.md` file. You can put a picture in, too. Rename your picture to `profile.png` and put it in the `assets/images/` folder.
-
-The social-icons footer can be used to link profiles from GitHub, OrcID and ReasearchGate aprart form the usual Twitter, LinkedIn and Facebook. You can add your user ID in the `_config.yml` file to link your accounts.
-
-PS: If you liked the theme, do star it on GitHub!
-
-### Also, check out:
-
-- [autoCV](https://github.com/jitinnair1/autocv) - a LaTeX template that builds and deploys the CV using GitHub Actions, so you will always have a ready link for your latest CV
-- [Tail](https://github.com/jitinnair1/tail) - a minimal, quick-setup template for a blog -->

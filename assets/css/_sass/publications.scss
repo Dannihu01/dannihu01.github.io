@@ -1,0 +1,59 @@
+/* ========================
+   Publications Page Styles
+======================== */
+
+.publications-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+.publication-entry {
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #ECECEC;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.publication-title {
+  font-size: 1.4em;
+  color: #0066cc;
+  margin-bottom: 8px;
+}
+
+.publication-authors,
+.publication-journal {
+  font-size: 0.9em;
+  color: #555;
+  margin: 4px 0;
+}
+
+.publication-link a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.publication-abstract {
+  summary {
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+  }
+
+  p {
+    font-size: 0.9em;
+    color: #333;
+    margin-top: 5px;
+  }
+}
+
+.highlight-author {
+  color: #20A4F3;
+  font-weight: bold;
+}

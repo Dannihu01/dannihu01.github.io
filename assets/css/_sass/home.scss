@@ -1,0 +1,144 @@
+/* ========================
+   Home Page / News Styles
+======================== */
+
+.research-highlight {
+  background-color: #D1E3FF;
+  border-left: 4px solid #005fa3;
+  border-right: 4px solid #005fa3;
+  padding: 1rem;
+  border-radius: 6px;
+  margin: 1rem 2rem 1rem 0;
+  max-width: 620px;
+}
+
+/* News section heading with gradient rule */
+.news-section-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+
+  h2 { margin: 0; }
+
+  &::after {
+    content: "";
+    flex: 1;
+    height: 2px;
+    background: linear-gradient(to right, #005fa3, transparent);
+    border-radius: 2px;
+  }
+}
+
+/* Timeline list */
+.news-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Each row: date column | vertical line | content */
+.news-item {
+  display: grid;
+  grid-template-columns: 5.5rem 1fr;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid #dde8f3;
+
+  &:last-child { border-bottom: none; }
+}
+
+/* Date column */
+.news-date-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 1.25rem;
+  border-right: 2px solid #b3cfea;
+}
+
+.news-month-day {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #005fa3;
+  white-space: nowrap;
+}
+
+.news-year {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+/* Content column */
+.news-body {
+  padding-left: 1.25rem;
+}
+
+.news-header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.4rem;
+}
+
+.news-title {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #1a2e4a;
+}
+
+.news-read-more {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #005fa3;
+  text-decoration: none;
+  white-space: nowrap;
+
+  &:hover { text-decoration: underline; }
+}
+
+.news-image-wrapper {
+  margin: 0.75rem 0 0.25rem;
+}
+
+.news-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  display: block;
+}
+
+.news-image-credit {
+  margin: 0.3rem 0 0.75rem;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.news-content {
+  margin: 0;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* Collapse date into a row above content on very small screens */
+@media (max-width: 480px) {
+  .news-item {
+    grid-template-columns: 1fr;
+  }
+
+  .news-date-col {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.4rem;
+    border-right: none;
+    border-bottom: 2px solid #b3cfea;
+    padding-right: 0;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .news-body {
+    padding-left: 0;
+  }
+}

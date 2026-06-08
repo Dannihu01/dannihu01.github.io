@@ -2,6 +2,10 @@ html, body {
   height: 100%;
 }
 
+.page-content {
+  margin-top: 2.5rem;
+}
+
 body {
   max-width: $content-width;
   font-family: $base-font-family;
