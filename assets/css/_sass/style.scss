@@ -35,6 +35,8 @@ body {
 .cv-header {
   display: flex;
   justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
   margin: 16px 0 20px;
 }
 

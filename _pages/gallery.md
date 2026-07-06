@@ -11,35 +11,14 @@ published: true
 </p>
 
 <div class="tabs">
-  <button class="tablink active" onclick="openTab(event, 'wedding')">Our Wedding ♥️</button>
-  <button class="tablink" onclick="openTab(event, 'undergrad')">Undergrad Graduation</button>
-  <button class="tablink" onclick="openTab(event, 'orchestra')">Violin & Orchestra</button>
+  <button class="tablink active" onclick="openTab(event, 'orchestra')">Violin & Orchestra</button>
   <button class="tablink" onclick="openTab(event, 'travel')">Travel & Nature</button>
   <button class="tablink" onclick="openTab(event, 'food')">Food</button>
-</div>
-
-<!-- Wedding Tab -->
-<div id="wedding" class="tabcontent active">
-  <h2>Our Wedding ♥️</h2>
-  <p class="tab-description">December 20, 2025 — the best day.</p>
-  <p class="wedding-credit">
-    Photos by
-    <a href="https://www.instagram.com/tabronstudios_/?hl=en" target="_blank" rel="noopener">Kalynn Tabron</a>
-    with
-    <a href="https://www.oncelikeaspark.com/" target="_blank" rel="noopener">Once Like a Spark</a>
-  </p>
-  {% include gallery-folder.html folder="/assets/images/Wedding/" alt_prefix="Wedding" %}
-</div>
-
-<!-- Undergrad Graduation Tab -->
-<div id="undergrad" class="tabcontent">
-  <h2>Undergrad Graduation 🎓</h2>
-  <p class="tab-description">April 29, 2023 — graduating from the University of Michigan with a B.S.E. in Computer Science.</p>
-  {% include gallery-folder.html folder="/assets/images/Undergrad Graduation/" alt_prefix="Undergrad Graduation" %}
+  <button class="tablink" onclick="openTab(event, 'wedding')">Our Wedding ♥️</button>
 </div>
 
 <!-- Violin & Orchestra Tab -->
-<div id="orchestra" class="tabcontent">
+<div id="orchestra" class="tabcontent active">
   <h2>Violin & Orchestra</h2>
   <p class="tab-description">I've been playing violin for 18+ years and absolutely love it.</p>
 
@@ -96,6 +75,19 @@ published: true
   <h2>Food 😋</h2>
   <p class="tab-description">I love cooking and trying new foods. Here are some highlights.</p>
   {% include gallery-folder.html folder="/assets/images/Food/" alt_prefix="Food" %}
+</div>
+
+<!-- Wedding Tab -->
+<div id="wedding" class="tabcontent">
+  <h2>Our Wedding ♥️</h2>
+  <p class="tab-description">December 20, 2025 — the best day.</p>
+  <p class="wedding-credit">
+    Photos by
+    <a href="https://www.instagram.com/tabronstudios_/?hl=en" target="_blank" rel="noopener">Kalynn Tabron</a>
+    with
+    <a href="https://www.oncelikeaspark.com/" target="_blank" rel="noopener">Once Like a Spark</a>
+  </p>
+  {% include gallery-folder.html folder="/assets/images/Wedding/" alt_prefix="Wedding" %}
 </div>
 
 <p class="gallery-page-footer">

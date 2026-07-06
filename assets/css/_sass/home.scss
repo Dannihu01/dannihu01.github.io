@@ -12,6 +12,20 @@
   max-width: 620px;
 }
 
+/* "Open to internships" banner */
+.availability-note {
+  background-color: #eafaf1;
+  border: 1px solid #59b783;
+  border-left: 4px solid #2f9e5f;
+  padding: 0.85rem 1.25rem;
+  border-radius: 6px;
+  margin: 1.5rem 0;
+  clear: right;
+  line-height: 1.55;
+
+  a { color: #1f7a4a; font-weight: 600; }
+}
+
 /* News section heading with gradient rule */
 .news-section-heading {
   display: flex;
@@ -34,111 +48,144 @@
 .news-list {
   list-style: none;
   padding: 0;
-  display: flex;
-  flex-direction: column;
+  margin: 0;
+  position: relative;
 }
 
-/* Each row: date column | vertical line | content */
+/* Continuous timeline rail behind the date badges */
+.news-list::before {
+  content: "";
+  position: absolute;
+  top: 0.5rem;
+  bottom: 0.5rem;
+  left: 1.85rem;
+  width: 2px;
+  background: linear-gradient(to bottom, #cfe0f2, #eef4fb);
+}
+
+/* Each row: date badge | content */
 .news-item {
   display: grid;
-  grid-template-columns: 5.5rem 1fr;
-  padding: 1.25rem 0;
-  border-bottom: 1px solid #dde8f3;
-
-  &:last-child { border-bottom: none; }
+  grid-template-columns: 3.75rem 1fr;
+  gap: 1.4rem;
+  padding: 1.5rem 0;
 }
 
-/* Date column */
-.news-date-col {
+/* Calendar-style date badge */
+.news-date {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  padding-right: 1.25rem;
-  border-right: 2px solid #b3cfea;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: fit-content;
+  padding: 0.45rem 0.3rem 0.4rem;
+  background: #fff;
+  border: 1px solid #d6e4f2;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(18, 38, 63, 0.06);
+  position: relative;
+  z-index: 1;
 }
 
-.news-month-day {
+.news-date__month {
+  font-size: 0.68rem;
   font-weight: 700;
-  font-size: 0.9rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
   color: #005fa3;
-  white-space: nowrap;
 }
 
-.news-year {
-  font-size: 0.85rem;
-  color: #888;
+.news-date__day {
+  font-size: 1.45rem;
+  font-weight: 800;
+  line-height: 1.05;
+  color: #12263f;
+}
+
+.news-date__year {
+  font-size: 0.66rem;
+  color: #8a97a5;
 }
 
 /* Content column */
-.news-body {
-  padding-left: 1.25rem;
-}
-
 .news-header {
   display: flex;
   align-items: baseline;
   gap: 0.75rem;
   flex-wrap: wrap;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.5rem;
 }
 
 .news-title {
   font-weight: 700;
-  font-size: 1rem;
-  color: #1a2e4a;
+  font-size: 1.08rem;
+  color: #12263f;
 }
 
 .news-read-more {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 600;
   color: #005fa3;
   text-decoration: none;
   white-space: nowrap;
+  padding: 0.15rem 0.55rem;
+  border: 1px solid #cfe0f2;
+  border-radius: 999px;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
 
-  &:hover { text-decoration: underline; }
+  &:hover {
+    background: #eef4fb;
+    border-color: #005fa3;
+    text-decoration: none;
+  }
 }
 
 .news-image-wrapper {
-  margin: 0.75rem 0 0.25rem;
+  margin: 0.85rem 0 0.35rem;
 }
 
 .news-image {
-  max-width: 100%;
-  height: auto;
-  border-radius: 6px;
   display: block;
+  width: 100%;
+  max-height: 320px;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
 .news-image-credit {
-  margin: 0.3rem 0 0.75rem;
-  font-size: 0.85rem;
-  color: #666;
+  margin: 0.35rem 0 0.75rem;
+  font-size: 0.82rem;
+  color: #7a8794;
 }
 
 .news-content {
   margin: 0;
-  color: #444;
-  line-height: 1.6;
+  color: #445061;
+  line-height: 1.65;
 }
 
-/* Collapse date into a row above content on very small screens */
-@media (max-width: 480px) {
+/* Stack the date into a compact pill above the content on small screens */
+@media (max-width: 520px) {
+  .news-list::before { display: none; }
+
   .news-item {
     grid-template-columns: 1fr;
+    gap: 0.7rem;
+    padding: 1.25rem 0;
+    border-bottom: 1px solid #e6eef6;
   }
+  .news-item:last-child { border-bottom: none; }
 
-  .news-date-col {
+  .news-date {
     flex-direction: row;
-    align-items: center;
+    align-items: baseline;
     gap: 0.4rem;
-    border-right: none;
-    border-bottom: 2px solid #b3cfea;
-    padding-right: 0;
-    padding-bottom: 0.5rem;
-    margin-bottom: 0.6rem;
+    justify-self: start;
+    padding: 0.25rem 0.6rem;
   }
 
-  .news-body {
-    padding-left: 0;
-  }
+  .news-date__day { font-size: 1rem; }
+  .news-date__month,
+  .news-date__year { font-size: 0.75rem; }
 }

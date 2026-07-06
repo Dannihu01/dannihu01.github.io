@@ -10,6 +10,9 @@ published: true
   <a class="cv-download" href="{{ '/assets/files/danni_cv.pdf' | relative_url }}" download>
     Download CV (PDF)
   </a>
+  <a class="cv-download" href="{{ '/assets/files/danni_resume.pdf' | relative_url }}" download>
+    Download Resume (1-page PDF)
+  </a>
 </div>
 
 <div class="cv-embed">

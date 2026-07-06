@@ -1,24 +1,33 @@
 ---
 layout: about
 permalink: /
-profile:
-  align: right
-  image: danni_profile.jpg
 published: true
 ---
 
-Hi! My name is Danniell, but I usually go by Danni. 
+<div class="availability-note">
+  <strong>🔎I'm seeking a research internship for summer 2027.</strong> I bring experience running controlled studies of AI development practices, designing human-AI interaction frameworks, and evaluating AI prototypes with users in clinical settings. I'm drawn to teams asking how AI systems actually perform for the people who use them.
+  Feel free to reach out at <a href="mailto:dannihu@umich.edu">dannihu@umich.edu</a> —
+  see my <a href="{{ '/CV/' | relative_url }}">CV</a>
+  and <a href="{{ '/publications/' | relative_url }}">publications</a>.
+</div>
 
-I'm a second-year PhD Candidate in Computer Science at the University of Michigan, where I have the pleasure of working with Professor [**Elizabeth Bondi-Kelly**](https://sites.google.com/view/elizabethbondi) in the [**Realize Lab**](https://sites.google.com/view/realize-lab) and Professor [**Westley Weimer**](https://web.eecs.umich.edu/~weimerw/) in the Weimer Research Group.
+<img class="profile right" width="33.33%" src="{{ '/assets/images/danni_profile.jpg' | relative_url }}" alt="Danniell Hu">
+
+Hi! My name is Danniell, but I usually go by Danni.
+
+
+I'm a PhD Candidate in Computer Science at the University of Michigan, advised by [**Elizabeth Bondi-Kelly**](https://sites.google.com/view/elizabethbondi) in the [**Realize Lab**](https://sites.google.com/view/realize-lab) and [**Westley Weimer**](https://web.eecs.umich.edu/~weimerw/) in the Weimer Research Group. 
+
 
 <div class="research-highlight">
-  <strong>My research is in AI for Social Impact (AISI). I study how we can design human-centered AI systems to address pressing societal challenges.</strong>  
-  My work sits at the intersection of artificial intelligence, software engineering, and psychology, with a focus on participatory-driven approaches. I'm particularly interested in medical contexts such as women's reproductive health.
+  <strong>I study why AI systems built for social impact fail the people they're meant to serve, and how to build ones that don't.</strong>
+  Human context (needs, constraints, values) gets lost during development, and deployed systems reshape the people around them in return. My research develops methods for both directions: stakeholder-grounded design, and evaluation of how AI affects real users. I'm particularly interested in medical contexts such as women's reproductive health. 
 </div>
+
 
 Previously, I was an R&D Embedded Software Engineer at [**Stryker**](https://www.stryker.com/us/en/index.html), where I developed PCBs and software for hospital bed ecosystems and medical monitoring technologies. I primarily worked in the medical division.
 
-Outside of research, music is a huge part of my life. I've been playing violin for 18 years (and counting!) and continue to be involved by playing in the University of Michigan's [**Campus Symphony Orchestra**](https://sites.google.com/a/umich.edu/campus-orchestras/). I also love working with my hands (crocheting, sewing, gardening), cooking, and playing multiplayer competitive video games. I also really enjoy going fishing! 
+Outside of research, music is a huge part of my life. I've been playing violin for 18 years (and counting!) and continue to be involved by playing in the University of Michigan's [**Campus Symphony Orchestra**](https://sites.google.com/a/umich.edu/campus-orchestras/). I also love sewing, crocheting, cooking, and playing multiplayer competitive video games. 
 
 <br> 
 
@@ -31,9 +40,10 @@ Outside of research, music is a huge part of my life. I've been playing violin f
   {% for news in news_items %}
     <li class="news-item">
 
-      <time class="news-date-col" datetime="{{ news.date | date: '%Y-%m-%d' }}">
-        <span class="news-month-day">{{ news.date | date: "%b %d" }}</span>
-        <span class="news-year">{{ news.date | date: "%Y" }}</span>
+      <time class="news-date" datetime="{{ news.date | date: '%Y-%m-%d' }}">
+        <span class="news-date__month">{{ news.date | date: "%b" }}</span>
+        <span class="news-date__day">{{ news.date | date: "%d" }}</span>
+        <span class="news-date__year">{{ news.date | date: "%Y" }}</span>
       </time>
 
       <div class="news-body">

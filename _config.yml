@@ -1,17 +1,12 @@
 ### your site title here
 
 title: Danniell Hu
-description: Computer Science PhD Candidate @ UMich. Research in AI for Social Impact.
+description: Computer Science PhD Candidate at the University of Michigan studying human-centered AI — how human context shapes AI systems and how AI reshapes human context in return, primarily in health.
 
 baseurl: ""
 # url: /dannihu01.github.io #name of GitHub repository
 # url: "" #custom url to be used instead of GitHub repository
-email: #
-
-# Pagination
-paginate: 4
-permalink: /blog/:year/:title/
-paginate_path: /blog/page:num/
+email: "dannihu@umich.edu"
 
 # Social media links in footer
 # twitter: "#"
@@ -21,7 +16,7 @@ github: "Dannihu01"
 # researchgate: "#"
 orcid: "0009-0000-1868-3004"
 # quora: "#"
-instagram: "dannihu01/"
+# instagram: "dannihu01/"
 # facebook: "#"
 
 # custom variables
@@ -78,7 +73,6 @@ exclude:
 
 plugins:
   - jekyll-seo-tag
-  - jekyll-paginate
   - jekyll-email-protect
   - jekyll-target-blank
 
