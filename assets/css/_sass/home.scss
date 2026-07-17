@@ -8,8 +8,18 @@
   border-right: 4px solid #005fa3;
   padding: 1rem;
   border-radius: 6px;
-  margin: 1rem 2rem 1rem 0;
-  max-width: 620px;
+  margin: 2rem 0;
+  display: flow-root;
+}
+
+/* Subtle divider between home page sections */
+.section-rule {
+  border: none;
+  height: 2px;
+  background: linear-gradient(to right, #cfe0f2, transparent);
+  border-radius: 2px;
+  margin: 2.5rem 0;
+  clear: both;
 }
 
 /* "Open to internships" banner */
@@ -19,7 +29,7 @@
   border-left: 4px solid #2f9e5f;
   padding: 0.85rem 1.25rem;
   border-radius: 6px;
-  margin: 1.5rem 0;
+  margin: 1.5rem 0 2.5rem;
   clear: right;
   line-height: 1.55;
 
@@ -59,8 +69,9 @@
   top: 0.5rem;
   bottom: 0.5rem;
   left: 1.85rem;
-  width: 2px;
-  background: linear-gradient(to bottom, #cfe0f2, #eef4fb);
+  width: 3px;
+  border-radius: 3px;
+  background: linear-gradient(to bottom, #005fa3, #1e9bd7 40%, #59b783 80%, #eafaf1);
 }
 
 /* Each row: date badge | content */
@@ -79,16 +90,20 @@
   justify-content: center;
   text-align: center;
   height: fit-content;
-  padding: 0.45rem 0.3rem 0.4rem;
+  padding: 0;
+  overflow: hidden;
   background: #fff;
-  border: 1px solid #d6e4f2;
+  border: 1px solid #cfe0f2;
   border-radius: 12px;
-  box-shadow: 0 1px 3px rgba(18, 38, 63, 0.06);
+  box-shadow: 0 1px 3px rgba(18, 38, 63, 0.08);
   position: relative;
   z-index: 1;
 }
 
 .news-date__month {
+  width: 100%;
+  padding: 0.3rem 0 0.24rem;
+  background: linear-gradient(135deg, #e3eff9, #d5eaf8);
   font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.07em;
@@ -97,13 +112,15 @@
 }
 
 .news-date__day {
-  font-size: 1.45rem;
-  font-weight: 800;
+  padding-top: 0.3rem;
+  font-size: 1.3rem;
+  font-weight: 700;
   line-height: 1.05;
-  color: #12263f;
+  color: #445061;
 }
 
 .news-date__year {
+  padding-bottom: 0.35rem;
   font-size: 0.66rem;
   color: #8a97a5;
 }
@@ -119,7 +136,7 @@
 
 .news-title {
   font-weight: 700;
-  font-size: 1.08rem;
+  font-size: 1.18rem;
   color: #12263f;
 }
 
@@ -185,7 +202,15 @@
     padding: 0.25rem 0.6rem;
   }
 
-  .news-date__day { font-size: 1rem; }
+  .news-date__month {
+    width: auto;
+    padding: 0;
+    background: none;
+    color: #005fa3;
+  }
+
+  .news-date__day { font-size: 1rem; padding-top: 0; }
+  .news-date__year { padding-bottom: 0; }
   .news-date__month,
   .news-date__year { font-size: 0.75rem; }
 }

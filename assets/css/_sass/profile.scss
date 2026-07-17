@@ -9,6 +9,25 @@
     border-radius: 20%;
 }
 
+/* Photo + contact caption block */
+.profile-card {
+    width: 33.33%;
+    margin-left: 2rem;
+    margin-bottom: 1.25rem;
+    text-align: center;
+
+    .profile {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+.profile-contact {
+    margin: 0.5rem 0 0;
+    font-size: 0.82rem;
+    color: #667586;
+}
+
 .left {
     float: left;
 }
@@ -23,6 +42,14 @@
 
     .profile {
       width: 40%;
+    }
+
+    .profile-card {
+      width: 40%;
+
+      .profile {
+        width: 100%;
+      }
     }
 
   }
