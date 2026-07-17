@@ -5,10 +5,10 @@ published: true
 ---
 
 <div class="availability-note">
-  <strong>🔎I'm seeking a research internship for summer 2027.</strong> 
-  Feel free to reach out at <a href="mailto:dannihu@umich.edu">dannihu@umich.edu</a> —
-  see my <a href="{{ '/CV/' | relative_url }}">CV</a>
-  and <a href="{{ '/publications/' | relative_url }}">publications</a>.
+  <strong>🔎 I'm seeking a research internship for summer 2027.</strong>
+  More about my work: <a href="{{ '/CV/' | relative_url }}">CV</a> ·
+  <a href="{{ '/publications/' | relative_url }}">publications</a> ·
+  <a href="mailto:dannihu@umich.edu">dannihu@umich.edu</a>
 </div>
 
 <img class="profile right" width="33.33%" src="{{ '/assets/images/danni_profile.jpg' | relative_url }}" alt="Danniell Hu">
