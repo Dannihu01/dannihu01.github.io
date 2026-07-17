@@ -51,6 +51,9 @@ Outside of research, music is a huge part of my life. I've been playing violin f
       <div class="news-body">
         <div class="news-header">
           <span class="news-title">{{ news.title }}</span>
+          {% if news.acceptance_rate %}
+            <span class="acceptance-rate-badge">{{ news.acceptance_rate }}</span>
+          {% endif %}
           {% if news.publication_url and news.publication_url != "" %}
             <a href="{{ news.publication_url }}" target="_blank" rel="noopener" class="news-read-more">
               Read more →

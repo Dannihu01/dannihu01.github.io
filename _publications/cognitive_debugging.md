@@ -2,7 +2,9 @@
 title: "Towards a Cognitive Model of Dynamic Debugging: Does Identifier Construction Matter?"
 authors: "<span class='highlight-author'>Danniell Hu</span>, Priscila Santiesteban, Madeline Endres, Westley Weimer"
 journal: "IEEE Transactions on Software Engineering (TSE)"
+venue_short: "TSE"
 year: 2024
+acceptance_rate: "~20–25% acceptance rate"
 external_url: "https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10684883"
 abstract: "Debugging is a vital and time-consuming process in software engineering. Recently, researchers have begun using
 neuroimaging to understand the cognitive bases of programming tasks by measuring patterns of neural activity. While exciting, prior

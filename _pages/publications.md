@@ -14,26 +14,37 @@ published: true
 
   {% for publication in sorted_publications %}
     <div class="publication-entry" id="publication-{{ publication.title | slugify }}">
-      <h2 class="publication-title">
-        {% if publication.external_url %}
-          <a href="{{ publication.external_url }}" target="_blank">{{ publication.title }}</a>
-        {% else %}
-          {{ publication.title }} <span class="publication-link-soon">(link coming soon)</span>
-        {% endif %}
-      </h2>
+      <div class="publication-venue-bubble">
+        <span class="publication-venue-name">{{ publication.venue_short | default: publication.journal }}</span>
+        <span class="publication-venue-year">{{ publication.year }}</span>
+      </div>
 
-      <p class="publication-authors"><strong>Authors:</strong> {{ publication.authors }}</p>
-      <p class="publication-journal">
-        <strong>Published in:</strong> <em>{{ publication.journal }}</em>, {{ publication.year }}
-      </p>
+      <div class="publication-details">
+        <h2 class="publication-title">
+          {% if publication.external_url %}
+            <a href="{{ publication.external_url }}" target="_blank">{{ publication.title }}</a>
+          {% else %}
+            {{ publication.title }} <span class="publication-link-soon">(link coming soon)</span>
+          {% endif %}
+        </h2>
 
-      {% if publication.abstract %}
-        <details class="publication-abstract">
-          <summary>View Abstract</summary>
-          <p>{{ publication.abstract }}</p>
-        </details>
-      {% endif %}
+        <p class="publication-authors">{{ publication.authors }}</p>
+        <p class="publication-journal">
+          <em>{{ publication.journal }}</em>{% if publication.acceptance_rate %} <span class="publication-rate">· {{ publication.acceptance_rate }}</span>{% endif %}
+        </p>
+
+        <div class="publication-links">
+          {% if publication.external_url %}
+            <a href="{{ publication.external_url }}" target="_blank">Paper</a>
+          {% endif %}
+          {% if publication.abstract %}
+            <details class="publication-abstract">
+              <summary>Abstract</summary>
+              <p>{{ publication.abstract }}</p>
+            </details>
+          {% endif %}
+        </div>
+      </div>
     </div>
-    <hr/>
   {% endfor %}
 </div>

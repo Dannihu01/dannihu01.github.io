@@ -3,64 +3,181 @@
 ======================== */
 
 .publications-container {
-  max-width: 1100px;
   margin: auto;
-  padding: 20px;
+  padding: 20px 0;
 }
 
+/* Flat two-column entry: venue info | paper details */
 .publication-entry {
-  margin-bottom: 20px;
-  padding: 15px;
-  border-radius: 8px;
-  background-color: #ECECEC;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: 8.5rem 1fr;
+  gap: 2.75rem;
+  align-items: start;
+  padding: 1.4rem 0;
+  border-bottom: 1px solid #e2e6ea;
+
+  &:last-of-type {
+    border-bottom: none;
+  }
 }
 
+/* Left column: one venue bubble with the acceptance rate nested inside */
+.publication-venue-bubble {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  gap: 0.1rem;
+  padding: 0.75rem 0.6rem;
+  background: linear-gradient(150deg, #0a6fbb, #044e86);
+  border: 1px solid #044e86;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(4, 78, 134, 0.22);
+}
+
+.publication-venue-name {
+  font-size: 1.1em;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #fff;
+}
+
+.publication-venue-year {
+  font-size: 0.8em;
+  font-weight: 700;
+  color: #bfdcf5;
+}
+
+/* Right column */
 .publication-title {
-  font-size: 1.4em;
-  color: #0066cc;
-  margin-bottom: 8px;
+  margin: 0 0 6px;
+  font-size: 1.12em;
+  line-height: 1.35;
+  color: #12263f;
+
+  a {
+    color: #12263f;
+    text-decoration: none;
+
+    &:hover {
+      color: #005fa3;
+      text-decoration: underline;
+    }
+  }
 }
 
 .publication-link-soon {
-  font-size: 0.6em;
+  font-size: 0.75em;
   font-style: italic;
+  font-weight: normal;
   color: #888;
   white-space: nowrap;
 }
 
-.publication-authors,
-.publication-journal {
-  font-size: 0.9em;
-  color: #555;
-  margin: 4px 0;
+.publication-authors {
+  margin: 0 0 3px;
+  font-size: 0.88em;
+  color: #333;
 }
 
-.publication-link a {
-  color: black;
-  text-decoration: none;
-  font-weight: bold;
+.publication-journal {
+  margin: 0 0 8px;
+  font-size: 0.82em;
+  color: #667586;
+}
 
-  &:hover {
-    text-decoration: underline;
+.publication-rate {
+  white-space: nowrap;
+  font-weight: 600;
+  color: #005fa3;
+}
+
+/* Links row: Paper · Abstract, styled as pill buttons */
+.publication-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85em;
+
+  > a {
+    display: inline-block;
+    padding: 0.22rem 0.85rem;
+    font-weight: 600;
+    color: #005fa3;
+    background: #eef4fb;
+    border: 1px solid #cfe0f2;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+
+    &:hover {
+      background: #dce9f7;
+      border-color: #005fa3;
+      text-decoration: none;
+    }
   }
 }
 
 .publication-abstract {
+  display: inline-block;
+
   summary {
-    font-weight: bold;
-    color: #333;
+    display: inline-block;
+    padding: 0.22rem 0.85rem;
+    font-weight: 600;
+    color: #005fa3;
+    background: #eef4fb;
+    border: 1px solid #cfe0f2;
+    border-radius: 999px;
     cursor: pointer;
+    list-style: none;
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &:hover {
+      background: #dce9f7;
+      border-color: #005fa3;
+    }
+  }
+
+  &[open] {
+    display: block;
+    margin-top: 4px;
+
+    summary {
+      margin-bottom: 6px;
+    }
   }
 
   p {
-    font-size: 0.9em;
-    color: #333;
     margin-top: 5px;
+    font-size: 0.95em;
+    color: #333;
   }
 }
 
 .highlight-author {
   color: #20A4F3;
   font-weight: bold;
+}
+
+/* Stack venue info above details on small screens */
+@media (max-width: 520px) {
+  .publication-entry {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .publication-venue-bubble {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-self: start;
+    padding: 0.4rem 0.7rem;
+  }
 }
