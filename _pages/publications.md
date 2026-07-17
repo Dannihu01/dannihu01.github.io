@@ -15,7 +15,11 @@ published: true
   {% for publication in sorted_publications %}
     <div class="publication-entry" id="publication-{{ publication.title | slugify }}">
       <h2 class="publication-title">
-        <a href="{{ publication.external_url }}" target="_blank">{{ publication.title }}</a>
+        {% if publication.external_url %}
+          <a href="{{ publication.external_url }}" target="_blank">{{ publication.title }}</a>
+        {% else %}
+          {{ publication.title }} <span class="publication-link-soon">(link coming soon)</span>
+        {% endif %}
       </h2>
 
       <p class="publication-authors"><strong>Authors:</strong> {{ publication.authors }}</p>
