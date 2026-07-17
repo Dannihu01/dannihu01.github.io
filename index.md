@@ -5,7 +5,7 @@ published: true
 ---
 
 <div class="availability-note">
-  <strong>🔎I'm seeking a research internship for summer 2027.</strong> I bring experience running controlled studies of AI development practices, designing human-AI interaction frameworks, and evaluating AI prototypes with users in clinical settings. I'm drawn to teams asking how AI systems actually perform for the people who use them.
+  <strong>🔎I'm seeking a research internship for summer 2027.</strong> 
   Feel free to reach out at <a href="mailto:dannihu@umich.edu">dannihu@umich.edu</a> —
   see my <a href="{{ '/CV/' | relative_url }}">CV</a>
   and <a href="{{ '/publications/' | relative_url }}">publications</a>.
